@@ -6,17 +6,18 @@
 <!--		<link rel="icon" type="image/x-icon" href="https://01.2daw.esvirgua.com/adivina-cancion/img/favicon.ico">-->
         <link rel="stylesheet" type="text/css" href="http://localhost/2223_2DAW_Adivina_la_cancion/src/css/index.css">
 <!--		<link rel="stylesheet" type="text/css" href="https://01.2daw.esvirgua.com/adivina-cancion/css/index.css">-->
+		<link rel="stylesheet" type="text/css" href="http://localhost/2223_2DAW_Adivina_la_cancion/src/css/estilos.css">
 	</head>
-	<body >
-		<main>
+	<body>
+		<main id="inicio">
             <div id="div2">
 <!--              <a href="https://01.2daw.esvirgua.com/adivina-cancion/html/puntuacion.html" > <abbr title="Puntuaciones"><button class="opciones" id="mostrarpuntos">-->
-				  <img src="http://localhost/2223_2DAW_Adivina_la_cancion/src/img/trofeo1.png" ></button></abbr>
-				  <img src="https://01.2daw.esvirgua.com/adivina-cancion/img/trofeo1.png" ></button></abbr>
+				  <button><img src="http://localhost/2223_2DAW_Adivina_la_cancion/src/img/trofeo1.png" ></button></abbr>
+<!--				  <img src="https://01.2daw.esvirgua.com/adivina-cancion/img/trofeo1.png" ></button></abbr>-->
 			  </a>
 <!--			  <a href="https://01.2daw.esvirgua.com/adivina-cancion/html/instrucciones.html" > <abbr title="Instrucciones"><button class="opciones">-->
-				  <img src="http://localhost/2223_2DAW_Adivina_la_cancion/src/img/instrucciones.png" ></button></abbr>
-				  <img src="https://01.2daw.esvirgua.com/adivina-cancion/img/instrucciones.png" ></button></abbr>
+				 <button><img src="http://localhost/2223_2DAW_Adivina_la_cancion/src/img/instrucciones.png" ></button></abbr>
+<!--				  <img src="https://01.2daw.esvirgua.com/adivina-cancion/img/instrucciones.png" ></button></abbr>-->
 			  </a>
             </div>
 			<div id="div1">
@@ -28,5 +29,74 @@
 				</button>
 			</div>
 		</main>
+		<div id="instrucciones">
+			<div id="contenedor">
+				<div id="divcerrar">
+					<span class="salir"/>X</span>
+					<div id="divcomun2">
+						<h1>Instrucciones</h1><br>
+					</div>
+					<p id="p1">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Amet illo ullam fugiat sint necessitatibus aspernatur error
+						cumque sed omnis quod voluptate, aut accusantium illum ipsam
+						quas blanditiis dolorum facere asperiores?
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="puntos">
+			<div id="contenedor">
+				<div id="divcerrar">
+					<span class="salir"/>X</span><br>
+					<div id="divcomun2">
+						<h1>Puntuaciones</h1><br>
+					</div>
+					<table id="tablaPuntos">
+						<tr>
+							<th>Posicion</th>
+							<th>Nombres</th>
+							<th>Ptos</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Pedro </td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Juan</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Lucas</td>
+							<td>1</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="categorias">
+			<div id="contenidoCategorias">
+				<span id="salirCategoria" class="salir"/>X</span><br>
+				<div id="luchas">
+					<div id="luchasRaciales" class="categorias">
+						<img src="http://localhost/2223_2DAW_Adivina_la_cancion/src/img/luchas.jpg" id="imgLuchas"/>
+						<h2 class="titulosCategorias">Luchas Raciales</h2>
+					</div>
+					<div id="lgtbq" class="categorias">
+						<img src="http://localhost/2223_2DAW_Adivina_la_cancion/src/img/lgtb.jpg" id="imgLGTB"/>
+						<h2 class="titulosCategorias">LGTBIQ+</h2>
+					</div>
+					<div id="feminismo" class="categorias">
+						<img src="http://localhost/2223_2DAW_Adivina_la_cancion/src/img/feminismo.jpg" id="imgFeminismo"/>
+						<h2 class="titulosCategorias">Feminismo</h2>
+					</div>
+				</div>
+				<button id="comenzarJuego" class="btn btn-primary">Jugar</button>
+			</div>
+		</div>
+		<script type="module" src="http://localhost/2223_2DAW_Adivina_la_cancion/src/js/servicios/app.js"></script>
 	</body>
 </html>
