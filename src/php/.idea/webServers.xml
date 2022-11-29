@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4a44ab8c-eeae-4161-8fa5-c63b3d045d20" name="2daw" url="http://18.2daw.esvirgua.com/Proyecto/2223_2DAW_Adivina_la_cancion/src/php">
+        <fileTransfer rootFolder="/Proyecto/2223_2DAW_Adivina_la_cancion/src/php" host="18.2daw.esvirgua.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="4f525a8f-a887-4801-8a6a-bc2f10a06d3e" name="adivinacancion" url="http://01.2daw.esvirgua.com/adivina-cancion">
+        <fileTransfer rootFolder="/adivina-cancion" host="01.2daw.esvirgua.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
