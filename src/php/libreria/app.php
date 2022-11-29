@@ -23,7 +23,8 @@
                 }
             }
             else{
-                header('Location:php/vistas/inicio.php');
+//                header('Location:php/vistas/inicio.php');
+                include 'html/inicio.html';
             }
         }
     }
