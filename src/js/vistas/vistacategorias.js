@@ -23,6 +23,14 @@ export class VistaCategorias extends Vista{
 		
 		this.pulsarCerrar = document.getElementsByClassName('salir')[2]
 		this.pulsarCerrar.addEventListener('click', this.cerrar.bind(this))
+		
+		this.divlucha=document.getElementById('luchasRaciales')
+		this.divlucha.addEventListener('click', this.pulsarluchas.bind(this));
+		this.divlgtb=document.getElementById('lgtbq')
+		this.divlgtb.addEventListener('click', this.pulsarlgtb.bind(this));
+		this.divfeminismo=document.getElementById('feminismo')
+		this.divfeminismo.addEventListener('click', this.pulsarfeminismo.bind(this));
+
 	}
 	
 	juego(){
@@ -31,5 +39,17 @@ export class VistaCategorias extends Vista{
 	
 	cerrar(){
 		this.controlador.ocultarVistas();
+	}
+
+	pulsarluchas(){
+		this.controlador.bordelucha();
+	}
+
+	pulsarlgtb(){
+		this.controlador.bordelgtb();
+	}
+
+	pulsarfeminismo(){
+		this.controlador.bordefeminismo();
 	}
 }

@@ -117,17 +117,108 @@ div#contenidoCategorias #luchasRaciales, #lgtbq, #feminismo{
 	margin: 30px;
 	flex-direction: column;
 }
+/* cuadro de imagen de feminismo */
+div#imagenfem{
+	background-image: url('http://localhost/2223_2DAW_Adivina_la_cancion/src/img/feminismo1.jpg');
+	height: 300px;
+	width: 300px;
+	
+}
 
+div#textofem{
+    position: absolute;
+    width: 300px;
+    overflow: hidden;
+    height: 300px;
+    background-color: rgba(31, 31, 31, 0.9);
+   
+    transition: opacity 1s;
+    
+    opacity: 0;
+}
+div#imagenfem:hover div#textofem{
+    opacity: 1.5;
+}
+p#infofem{
+    color: aliceblue;
+    position: absolute;
+	margin-top: 50px;
+    margin-left: 40px;
+	margin-right: 40px;
+    font-size: 21px;
+	
+}
+/* cuadro de imagen lgtb */
+div#imagenlgtb{
+	background-image: url('http://localhost/2223_2DAW_Adivina_la_cancion/src/img/lgtb1.jpg');
+	height: 300px;
+	width: 300px;
+	
+}
+div#textolgtb{
+    position: absolute;
+    width: 300px;
+    overflow: hidden;
+    height: 300px;
+    background-color: rgba(31, 31, 31, 0.9);
+   
+    transition: opacity 1s;
+    
+    opacity: 0;
+}
+div#imagenlgtb:hover div#textolgtb{
+    opacity: 1.5;
+}
+p#infolgtb{
+    color: aliceblue;
+    position: absolute;
+	margin-top: 50px;
+	margin-right: 40px;
+    margin-left: 40px;
+    font-size: 21px;
+	
+}
+/* cuadro imagen de las luchas sociales */
+div#imagenlucha{
+	background-image: url('http://localhost/2223_2DAW_Adivina_la_cancion/src/img/luchas1.jpg');
+	height: 300px;
+	width: 300px;
+	
+}
+div#textolucha{
+    position: absolute;
+    width: 300px;
+    overflow: hidden;
+    height: 300px;
+    background-color: rgba(31, 31, 31, 0.9);
+   
+    transition: opacity 1s;
+    
+    opacity: 0;
+}
+div#imagenlucha:hover div#textolucha{
+    opacity: 1.5;
+}
+p#infolucha{
+    color: aliceblue;
+    position: absolute;
+	margin-top: 50px;
+	margin-right: 40px;
+    margin-left: 40px;
+    font-size: 21px;
+	
+}
 div.categorias:hover{
 
-	transition: 2s;
+	transition: 1s;
 	transform: rotate3d(0, 20, 0, 180deg);
+	transform: scale(1.2);
 	
 }
 
 div.categorias{
 
-	transition: 2s;
+	transition: 1s;
 	transform: rotate3d(0, 0, 0, 0deg);
 	
 }
@@ -154,8 +245,11 @@ img#imgLuchas, #imgFeminismo, #imgLGTB{
 
 	width: 300px;
 	height: 300px;
-
+	
+	
+	
 }
+
 
 span#salirCategoria{
 	padding: 10px 15px;
