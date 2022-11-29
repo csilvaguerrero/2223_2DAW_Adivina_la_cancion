@@ -32,4 +32,5 @@ export class VistaInstrucciones extends Vista{
 	cerrar(){
 		this.controlador.ocultarVistas();
 	}
+
 }

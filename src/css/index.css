@@ -25,8 +25,8 @@ div#div1 {
 
 div#div2{
     position: absolute;
-    top: 90px;
-    right: 10px;
+    top: 2vh;
+    right: 2%;
 }
 
 button.opciones{

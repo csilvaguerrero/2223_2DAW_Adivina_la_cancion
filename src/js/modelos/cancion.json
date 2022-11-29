@@ -1,0 +1,25 @@
+{
+  "canciones": [
+    {
+      "id": 1,
+      "audio": "audio1",
+      "respuesta_correcta": 2,
+      "luchas": [[1, "Identidad de Género"], [2, "Discriminación"], [3, "Maltrato contra la mujer"]],
+      "respuestas": [[1, "Bloody Mary"], [2, "Born This Way"], [3, "Government Hooker"], [4, "Heavy Metal Lover"]]
+    },
+    {
+      "id": 2,
+      "audio": "audio2",
+      "respuesta_correcta": 1,
+      "luchas": [[1, "Identidad de Género"], [2, "Discriminación"], [3, "Maltrato contra la mujer"]],
+      "respuestas": [[1, "Bloody Mary"], [2, "Born This Way"], [3, "Government Hooker"]]
+    },
+    {
+      "id": 3,
+      "audio": "audio3",
+      "respuesta_correcta": 3,
+      "luchas": [[1, "Identidad de Género"], [2, "Discriminación"], [3, "Maltrato contra la mujer"], [4, "Lucha contra la violencia"]],
+      "respuestas": [[1, "Bloody Mary"], [2, "Born This Way"], [3, "Government Hooker"], [4, "Marry The Night"], [5, "Heavy Metal Lover"]]
+    }
+  ]
+}

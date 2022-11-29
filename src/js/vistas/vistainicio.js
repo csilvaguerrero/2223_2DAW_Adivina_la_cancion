@@ -17,5 +17,19 @@ export class VistaInicio extends Vista{
 	constructor(controlador, div){
 		super(div)
 		this.controlador = controlador
+
+		this.divBotones = document.getElementById('div2');
+
+		if(document.getElementById('barra-admin')){
+			this.menuAdmin = document.getElementById('barra-admin');
+			this.moverMenuAdmin();
+		}
+
 	}
+
+	moverMenuAdmin(){
+		this.divBotones.style.position = "absolute";
+		this.divBotones.style.top = "10vh";
+	}
+
 }
