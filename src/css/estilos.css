@@ -1,27 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400&family=Nunito:wght@300;400&display=swap');
 
 /* Eliminamos los valores del navegador por defecto */
 *{
-	
 	padding: 0;
 	margin: 0;
-	font-family: Nunito;
+	font-family: Fira Sans;
 	text-decoration: none;
-	
 }
 
 html{
-	
 	height: 100vh;
 }
 
 body{
-	
 	width: 100%;
 	height: 100%;
-	background-repeat: no-repeat;
-	background-size: contain;
-	
-	
+	background: linear-gradient(to bottom, #9851b8, #341741);
 }
 
 /* DIVS a los que se hará referencia en cliente para el despliegue de su vista */
