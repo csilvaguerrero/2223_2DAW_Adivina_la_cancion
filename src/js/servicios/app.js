@@ -31,6 +31,11 @@ class Controlador{
 		this.divPuntos = document.getElementById('puntos')
 		this.divCategorias = document.getElementById('categorias')
 		this.divJuego = document.getElementById('juego')
+		this.divlucha=document.getElementById('luchasRaciales')
+		this.divlgtb=document.getElementById('lgtbq')
+		this.divfeminismo=document.getElementById('feminismo')
+	
+		
 		
 		this.divInicio = new VistaInicio(this, this.divInicio)
 		this.divInstrucciones = new VistaInstrucciones(this, this.divInstrucciones)
@@ -39,8 +44,10 @@ class Controlador{
 		this.divJuego = new VistaJuego(this, this.divJuego)
 		
 		this.divInicio.mostrar(true)
+
 		
 	}
+
 	/**
 	 *	Oculta todas las vistas menos iniciar.
 	 */
@@ -50,6 +57,7 @@ class Controlador{
 	    this.divCategorias.mostrar(false)
 		this.divJuego.mostrar(false)
 	}
+
 	/**
 	 *	Atención a la pulsación del boton de instrucciones.
 	 */
@@ -72,26 +80,58 @@ class Controlador{
 		this.divCategorias.mostrar(true)
 	}
 
-	pulsarJuego(){
-		this.ocultarVistas()
-		this.divJuego.mostrar(true)
-		fetch("../../js/modelos/cancion.json")
+	pulsarJuego(categoria){
+		// fetch("js/modelos/cancion.json")
+		fetch("js/modelos/consultarCanciones.php")
 			.then(respuesta => respuesta.json())
-			.then(objeto => this.elegirCancion(objeto))
+			// .then(objeto => this.elegirCancion(objeto, categoria))
+			.then(objeto => console.log(objeto))
 			.catch(error => console.log("KAPPUT: " + error))
 	}
 
-	elegirCancion(objeto){
+	elegirCancion(objeto, categoria){
 		let canciones = objeto.canciones
-		let idCanciones = new Set()
+		let cancionesSeleccionadas = []
 		for(let cancion of canciones){
-			idCanciones.add(cancion.id)
+			if(cancion.idCategoria==categoria){
+				cancionesSeleccionadas.push(cancion)
+			}
 		}
-		let eleccion = Math.floor(Math.random() * idCanciones.size)
-		this.divJuego.mostrarCancion(canciones[eleccion])
+		if(cancionesSeleccionadas.length>0){
+			this.ocultarVistas()
+			this.divJuego.mostrar(true)
+			let eleccion = Math.floor(Math.random() * cancionesSeleccionadas.length)
+			this.divJuego.mostrarCancion(cancionesSeleccionadas[eleccion])
+		}else{
+			window.alert('Esta categoría no tiene canciones')
+		}
 	}
 
 	
+	/**
+	 *	Atención a la pulsación de la imagen de luchas sociales(se añade borde).
+	 */
+	bordelucha(){
+		this.ocultarborde()
+		this.divlucha.borde(true)
+		
+	}
+	/**
+	 *	Atención a la pulsación de la imagen de lgtb(se añade borde).
+	 */
+	bordelgtb(){		
+		this.ocultarborde()
+		this.divlgtb.borde(true)
+		
+	}
+	/**
+	 *	Atención a la pulsación de la imagen de feminismo(se añade borde).
+	 */
+	bordefeminismo(){
+		this.ocultarborde()
+		this.divfeminismo.borde(true)
+		
+	}
 	/**
 	 * Devuelve el modelo de la aplicación.
 	 * @return {Modelo} El modelo de la aplicación.

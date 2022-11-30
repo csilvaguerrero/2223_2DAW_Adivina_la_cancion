@@ -16,6 +16,7 @@ export class Vista{
 	/**
 	 *	Muestra u oculta el div de los popups.
 	 *	@param ver {Boolean} True muestra la vista y false la oculta.
+	 * @param border {Boolean} true muestra el border y false lo oculta
 	 */
 	mostrar(ver){
 		if(ver){
@@ -27,4 +28,5 @@ export class Vista{
 			this.div.style.opacity = '0';
 		}
 	}
+
 }
