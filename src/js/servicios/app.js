@@ -89,6 +89,7 @@ class Controlador{
 	bordelucha(){
 		this.ocultarborde()
 		this.divlucha.borde(true)
+		
 	}
 	/**
 	 *	Atención a la pulsación de la imagen de lgtb(se añade borde).
@@ -96,6 +97,7 @@ class Controlador{
 	bordelgtb(){		
 		this.ocultarborde()
 		this.divlgtb.borde(true)
+		
 	}
 	/**
 	 *	Atención a la pulsación de la imagen de feminismo(se añade borde).
@@ -103,6 +105,7 @@ class Controlador{
 	bordefeminismo(){
 		this.ocultarborde()
 		this.divfeminismo.borde(true)
+		
 	}
 	/**
 	 * Devuelve el modelo de la aplicación.
