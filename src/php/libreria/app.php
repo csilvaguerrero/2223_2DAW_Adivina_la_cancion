@@ -18,6 +18,14 @@
                     require_once $ficheroControlador;
                     ucfirst($url[0]);
                     $controlador = new $url[0];
+                    if (isset($url[1])){
+                        if (isset($url[2])){
+                            $controlador->{$url[1]}($url[2]);
+                        }
+                        else{
+                            $controlador->{$url[1]}();
+                        }
+                    }
                 } else {
                     $controlador = new Errata();
                 }

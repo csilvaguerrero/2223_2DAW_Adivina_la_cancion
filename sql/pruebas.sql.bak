@@ -79,11 +79,11 @@ SELECT AC_respuestas.titulo, AC_categorias.nombre FROM AC_categorias INNER JOIN 
 INNER JOIN AC_respuestas ON AC_respuestas.num_respuesta = AC_canciones.respuesta_correcta AND AC_canciones.id = AC_respuestas.id_cancion;
 
 
-INSERT INTO AC_canciones(id, audio, respuesta_correcta, id_categoria)
-VALUES(1, 'racismout.mp3', 2, 1),
-		(2, 'grana.mp3', 1, 1),
-		(3, 'declaration.mp3', 4, 2),
-		(4, 'born.mp3', 3, 3);
+INSERT INTO AC_canciones(audio, respuesta_correcta, id_categoria)
+VALUES('racismout.mp3', 2, 1),
+		('grana.mp3', 1, 1),
+		('declaration.mp3', 4, 2),
+		('born.mp3', 3, 3);
 
 INSERT INTO AC_respuestas(id_cancion, num_respuesta, titulo)
 VALUES(1, 1, 'Los salvadores'),
