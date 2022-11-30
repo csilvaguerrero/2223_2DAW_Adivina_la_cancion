@@ -8,7 +8,7 @@
                     <a href="../../html/crudcanciones.html">Gestiónar canciones</a>
                     <a href="../../html/crudtemas.html">Gestiónar temas de lucha</a>
                     <div id="admin">
-                        <span>'.$_SESSION['admin']['nombre'].'</span>
+                        <span>' .$_SESSION['admin']['nombre'].'</span>
                         <a href="logout.php">Cerrar sesión</a>
                     </div>
                 </nav>';

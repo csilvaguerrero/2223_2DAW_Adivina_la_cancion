@@ -54,7 +54,22 @@ VALUES(1, 1, 'Correcta1'),
 
 
 
+SELECT AC_canciones.id_categoria, AC_respuestas.titulo FROM AC_respuestas INNER JOIN AC_canciones
+ON AC_canciones.respuesta_correcta = AC_respuestas.num_respuesta AND AC_canciones.id = AC_respuestas.id_cancion
+INNER JOIN AC_categorias ON AC_categorias.id = AC_canciones.id_categoria;
+
 
 SELECT AC_canciones.id_categoria, AC_respuestas.titulo FROM AC_respuestas INNER JOIN AC_canciones
 ON AC_canciones.respuesta_correcta = AC_respuestas.num_respuesta AND AC_canciones.id = AC_respuestas.id_cancion
 INNER JOIN AC_categorias ON AC_categorias.id = AC_canciones.id_categoria;
+
+
+--ID CANCION, ID CATEGORIA Y TITULO CORRECTO
+SELECT AC_canciones.id, AC_canciones.id_categoria, AC_respuestas.titulo FROM AC_canciones INNER JOIN
+AC_respuestas ON AC_respuestas.id_cancion = AC_canciones.id AND
+AC_canciones.respuesta_correcta = AC_respuestas.num_respuesta; 
+
+--ID AUDIO, AUDIO, ID CATEGORIA, NUMRESPUESTA Y TITULOS POSIBLES
+SELECT AC_canciones.id, AC_canciones.audio, AC_canciones.id_categoria, AC_respuestas.num_respuesta ,AC_respuestas.titulo FROM AC_canciones INNER JOIN
+AC_respuestas ON AC_respuestas.id_cancion = AC_canciones.id;
+

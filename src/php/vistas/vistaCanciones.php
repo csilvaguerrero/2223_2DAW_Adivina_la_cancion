@@ -1,7 +1,6 @@
 <?php
-
-    echo '<table>
-    <tr><td>asdasd</td><td>asdasd</td></tr>
-          </table>'
-
-?>
+    include 'html/headercanciones.html';
+    while($fila = $resultado->fetch_array()){
+        echo '<tr><td>'.$fila['titulo'].'</td><td>'.$fila['nombre'].'</td><td><i class="fa-sharp fa-solid fa-trash"></i><i class="fa-sharp fa-solid fa-pencil"></i><i class="fa-sharp fa-solid fa-magnifying-glass"></td></tr>';
+    }
+    include 'html/footercanciones.html';
