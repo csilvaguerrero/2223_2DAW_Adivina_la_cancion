@@ -14,12 +14,13 @@
     </head>
     <body>
 		<div id="divAnadirCanciones">
+			<a href="crudcanciones.html"><button class="btnVolver">Volver</button></a>
 			<form id="formulario">
-				<button class="salirFormulario">X</button>
+				<a href="crudcanciones.html"><button class="salirFormulario">X</button></a>
 				<h1 class="tituloInicio">Añadir canciones</h1>
 				<label class="labelFormulario">Audio</label>
 				<br>
-				<input type="file" class="inputFormulario" id="inputAudio" name="audio"/>
+				<input type="file" class="inputFormulario" id="inputAudio" accept=".mp3" required onchange="validar()"/>
 				<br>
 				<label class="labelFormulario">Categorías</label>
 				<br>
@@ -31,11 +32,11 @@
 				<br>
 				<label class="labelFormulario">Respuestas</label>
 				<br>
-				<input type="radio"/>
+				<input type="radio" name="correcta"/>
 				<input type="text"/>				
 				<button id="anadirRespuestas">+</button>
 				<br>
-				<input type="radio"/>
+				<input type="radio" name="correcta"/>
 				<input type="text" disabled placeholder="8 mile"/>				
 				<button id="anadirRespuestas">-</button>
 				<br><br>

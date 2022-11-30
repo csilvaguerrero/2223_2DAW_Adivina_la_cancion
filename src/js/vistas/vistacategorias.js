@@ -22,14 +22,41 @@ export class VistaCategorias extends Vista{
 		this.pulsarJuego.addEventListener('click', this.juego.bind(this));
 		
 		this.pulsarCerrar = document.getElementsByClassName('salir')[2]
-		this.pulsarCerrar.addEventListener('click', this.cerrar.bind(this))
+		this.pulsarCerrar.addEventListener('click', this.cerrar.bind(this));
+
+		this.categoriaSeleccionada= null
+		this.divlucha=document.getElementById('luchasRaciales')
+		this.divlucha.addEventListener('click', this.pulsarluchas.bind(this));
+		this.divlgtb=document.getElementById('lgtbq')
+		this.divlgtb.addEventListener('click', this.pulsarlgtb.bind(this));
+		this.divfeminismo=document.getElementById('feminismo')
+		this.divfeminismo.addEventListener('click', this.pulsarfeminismo.bind(this));
+
 	}
+
+
 	
 	juego(){
 		this.controlador.pulsarCategorias();
+
 	}
 	
 	cerrar(){
 		this.controlador.ocultarVistas();
+	}
+
+	pulsarluchas(){
+		this.controlador.bordelucha();
+		this.categoriaSeleccionada= 1;
+	}
+
+	pulsarlgtb(){
+		this.controlador.bordelgtb();
+		this.categoriaSeleccionada= 2;
+	}
+
+	pulsarfeminismo(){
+		this.controlador.bordefeminismo();
+		this.categoriaSeleccionada= 3;
 	}
 }
