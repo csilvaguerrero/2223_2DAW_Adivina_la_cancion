@@ -18,6 +18,12 @@ body{
 	background: linear-gradient(to bottom, #9851b8, #341741);
 }
 
+/* Resetear estilos de enlaces */
+a{
+	text-decoration: none;
+	color: white;
+}
+
 /* DIVS a los que se hará referencia en cliente para el despliegue de su vista */
 div#divCRUDcanciones, #divCRUDtemas, #divAnadirCanciones, #divPuntuacion, #divAnadirTemas, #divRegistro, #divLogin{
 	display: flex;
@@ -149,6 +155,11 @@ button#comenzarJuego:hover{
 }
 
 /* Propiedades de las tablas que posee el administrador */
+caption{
+	color: white;
+	font-weight: bold;
+}
+
 table.tablasCRUD{
 	width: 60%;
 	height: 300px;
@@ -167,6 +178,27 @@ table.tablasCRUD > tbody{
 }
 
 table.tablasCRUD > tbody > tr:nth-child(even){
+	background-color: #544596;	
+}
+
+table.tablascanciones{
+	width: 60%;
+	height: 100px;
+	background-color: #794393;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+table.tablascanciones > thead{
+	background-color: #544596;
+	color: yellow;
+}
+
+table.tablascanciones > tbody{
+	color: white;
+}
+
+table.tablascanciones > tbody > tr:nth-child(even){
 	background-color: #544596;	
 }
 
@@ -430,7 +462,7 @@ div#flecha{
 
 /* Media Queries */
 
-/* Extra small devices (phones, 600px and down) */
+/* Dispositivos pequeños (móviles, 600px <) */
 @media only screen and (max-width: 600px) {
 	button#boton3 {
 		display: none;
@@ -456,12 +488,12 @@ div#flecha{
 	}
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Dispositivos medianos (tablets, 768px <) */
 @media only screen and (min-width: 768px) {
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Dispositivos grandes (ordenadores, 1200px <) */
 @media only screen and (min-width: 1200px) {
 
 }
