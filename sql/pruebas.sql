@@ -73,3 +73,7 @@ AC_canciones.respuesta_correcta = AC_respuestas.num_respuesta;
 SELECT AC_canciones.id, AC_canciones.audio, AC_canciones.id_categoria, AC_respuestas.num_respuesta ,AC_respuestas.titulo FROM AC_canciones INNER JOIN
 AC_respuestas ON AC_respuestas.id_cancion = AC_canciones.id;
 
+--MOSTRAR TITULO DE LA CANCIÓN Y SU RESPECTIVA CATEGORIA
+
+SELECT AC_respuestas.titulo, AC_categorias.nombre FROM AC_categorias INNER JOIN AC_canciones ON AC_canciones.id_categoria = AC_categorias.id
+INNER JOIN AC_respuestas ON AC_respuestas.num_respuesta = AC_canciones.respuesta_correcta AND AC_canciones.id = AC_respuestas.id_cancion;
