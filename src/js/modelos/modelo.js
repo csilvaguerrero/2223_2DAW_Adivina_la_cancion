@@ -11,14 +11,23 @@ export class Modelo{
 	/**
 	 *	Constructor de la clase
 	 */
-	constructor(){
-		this.lista = [] //Array de datos
+	constructor(controlador){
+
+		this.controlador = controlador
+
 	}
 	/**
-	 * Devuelve los datos del modelo.
-	 * #return {Array} Datos del modelo
+	 * Hace una petición GET al servidor para obtener los datos de las canciones que pertenecen a cierta categoría
+	 * @param categoria {Number} Número identificativo de la categoría de las canciones
 	 */
-	getDatos(){
-	    return this.lista
+	getDatosCanciones(categoria){
+		// fetch("js/modelos/cancion.json")
+		// fetch("js/modelos/consultarCanciones.php", opciones)
+		console.log(categoria)
+		fetch("js/modelos/consultarCanciones.php" + "?categoria=" + categoria)
+			.then(respuesta => respuesta.json())
+			.then(objeto => this.controlador.tratarDatos(objeto))
+			// .then(objeto => console.log(objeto))
+			.catch(error => console.log("KAPPUT: " + error))
 	}
 }
