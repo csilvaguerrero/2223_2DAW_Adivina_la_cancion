@@ -29,18 +29,37 @@
 					<option>Feminismo</option>
 				</select>
 				<br>
-				<label class="labelFormulario">Respuestas</label>
-				<br>
-				<input type="radio"/>
-				<input type="text"/>				
-				<button id="anadirRespuestas">+</button>
-				<br>
-				<input type="radio"/>
-				<input type="text" disabled placeholder="8 mile"/>				
-				<button id="anadirRespuestas">-</button>
+				<label class="labelFormulario">Respuestas</label><br><br>
+
+				<!-- <input type="radio" name="correcta" /> 
+				<input type="text"><button id="anadirRespuestas"  >+</button><br>
+				<input type="radio" name="correcta" /> 
+				<input type="text"><button id="anadirRespuestas">-</button><br> -->
+				</form>		
+				<div id="divRespuesta">
+					<label>Nombre:
+						<input type=text id="inputAnadir"/>&nbsp;&nbsp;&nbsp;<button id="AnadirRespuesta" class="botonform">+</button>
+					</label>
+					<br><br>
+					<table id="tabla">
+						<thead>
+							<tr>
+								<th class="titulo">Respuesta &nbsp;&nbsp;</th>
+								<th class="titulo">&nbsp;Correcta&nbsp;</th>
+								<th class="titulo">&nbsp;opc&nbsp;</th>
+							</tr>
+						</thead>
+						<tbody id="bodyRespuesta">
+						</tbody>
+					</table>
+					<input type="submit"  class="btn btn-primary" id="inputEnviar" value="Siguiente"/>
+				</div>
+		   
+				<script type="module" src="http://localhost/2223_2DAW_Adivina_la_cancion/src/js/servicios/app2.js"></script>
+					
 				<br><br>
-				<input type="submit"  class="btn btn-primary" id="inputEnviar" value="Siguiente"/>
-			</form>	
+				
+			
 		</div>
 		<script  src="http://localhost/2223_2DAW_Adivina_la_cancion/src/js/validaciones/validacion.js"></script>
     </body>
