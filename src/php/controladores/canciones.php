@@ -22,8 +22,9 @@
             $radio = $_POST['circulo'];
             $temporal = $_FILES['audio']['tmp_name'];
 
-            $this->modelo->anadirCanciones($audio, $titulo, $categoria, $radio, $temporal);
-            $this->vista->mostrar();
+            $id = $this->modelo->anadirCanciones($audio, $titulo, $categoria, $radio, $temporal);
+            $this->modelo->anadirRespuestas($id, $radio, $titulo);
+
            // header('Location: https://01.2daw.esvirgua.com/adivina-cancion/canciones');
         }
     }

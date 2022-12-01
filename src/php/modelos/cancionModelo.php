@@ -19,8 +19,8 @@
             $sql = "INSERT INTO AC_canciones(audio, respuesta_correcta, id_categoria) VALUES ('$audio',$radio,$categoria)";
             $this->conexion->query($sql);
             $id = $this->conexion->insert_id;
-            $this->move_uploaded_file($temporal, 'audio/'.$titulo);
-            $this->anadirRespuestas($id, $radio, $titulo);
+            //$this->modelo->move_uploaded_file($temporal, 'audio/'.$titulo);
+            return $id;
         }
         public function anadirRespuestas($id, $radio, $titulo){
             $sql = "INSERT INTO AC_respuestas(id_cancion, num_respuesta, titulo) VALUES($id, $radio, '$titulo')";
