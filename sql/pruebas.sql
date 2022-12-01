@@ -85,19 +85,70 @@ VALUES(1, 'racismout.mp3', 2, 1),
 		(3, 'declaration.mp3', 4, 2),
 		(4, 'born.mp3', 3, 3);
 
+
 INSERT INTO AC_respuestas(id_cancion, num_respuesta, titulo)
 VALUES(1, 1, 'Los salvadores'),
 (1, 2, 'RAP CONTRA EL RACISMO'),
 (1, 3, 'Hundred'),
 (1, 4, 'Loves'),
-(2, 1, 'DE GRANÁ A MARACAY'),
-(2, 2, 'Déspotas'),
+(2, 1, 'DE GRANA A MARACAY'),
+(2, 2, 'Despotas'),
 (2, 3, 'Carretera'),
 (2, 4, 'DEMONDS'),
 (3, 1, 'Mundo de piedra'),
 (3, 2, 'Streesed out'),
-(3, 3, 'Entre un millón'),
-(3, 4, 'Déclaration'),
+(3, 3, 'Entre un millon'),
+(3, 4, 'Declaration'),
+(4, 1, 'Givenchy'),
+(4, 2, 'No fear'),
+(4, 3, 'Born this way'),
+(4, 4, 'Awful things');
+
+
+---------------------
+
+CREATE TABLE AC_canciones(
+
+	id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    audio VARCHAR(100) /*NOT NULL UNIQUE*/NULL,
+    respuesta_correcta TINYINT UNSIGNED NULL,
+    id_categoria TINYINT UNSIGNED,
+    CONSTRAINT FK_CategoriaCanciones FOREIGN KEY (id_categoria) REFERENCES AC_categorias (id)
+
+);
+
+
+INSERT INTO AC_canciones(id, audio, respuesta_correcta, id_categoria)
+VALUES(1, 'racismout.mp3', 2, 1),
+		(2, 'grana.mp3', 1, 1),
+		(3, 'declaration.mp3', 4, 2),
+		(4, 'born.mp3', 3, 3);
+		
+		
+CREATE TABLE AC_respuestas(
+	
+    id_cancion SMALLINT UNSIGNED,
+    CONSTRAINT FK_CancionRespuestas FOREIGN KEY (id_cancion) REFERENCES AC_canciones (id),
+    num_respuesta TINYINT UNSIGNED NOT NULL,
+    titulo VARCHAR(100) NOT NULL,
+    CONSTRAINT PK_CancionRespuesta PRIMARY KEY (id_cancion, num_respuesta)
+
+);
+
+
+INSERT INTO AC_respuestas(id_cancion, num_respuesta, titulo)
+VALUES(1, 1, 'Los salvadores'),
+(1, 2, 'RAP CONTRA EL RACISMO'),
+(1, 3, 'Hundred'),
+(1, 4, 'Loves'),
+(2, 1, 'DE GRANA A MARACAY'),
+(2, 2, 'Despotas'),
+(2, 3, 'Carretera'),
+(2, 4, 'DEMONDS'),
+(3, 1, 'Mundo de piedra'),
+(3, 2, 'Streesed out'),
+(3, 3, 'Entre un millon'),
+(3, 4, 'Declaration'),
 (4, 1, 'Givenchy'),
 (4, 2, 'No fear'),
 (4, 3, 'Born this way'),
