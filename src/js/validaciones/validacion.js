@@ -7,6 +7,8 @@ function validar() {
     // del atributo "accept", mostrar un error.
     if(document.getElementById('inputAudio').getAttribute('accept').split(',').indexOf(extension) < 0) {
       alert('Archivo invalido. No se permite la extension ' + extension);
+      let archivo2= document.getElementById('inputAudio');
+      archivo2.value= "";
     }
   }
   function NumText(string){//solo letras y numeros
