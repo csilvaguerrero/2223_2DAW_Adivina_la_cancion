@@ -18,6 +18,7 @@
                     require_once $ficheroControlador;
                     ucfirst($url[0]);
                     $controlador = new $url[0];
+<<<<<<< HEAD
                     if (isset($url[1])){
                         if (isset($url[2])){
                             $controlador->{$url[1]}($url[2]);
@@ -26,13 +27,19 @@
                             $controlador->{$url[1]}();
                         }
                     }
+=======
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
                 } else {
                     $controlador = new Errata();
                 }
             }
             else{
+<<<<<<< HEAD
 //                header('Location:php/vistas/inicio.php');
                 include 'html/inicio.html';
+=======
+                header('Location:php/vistas/inicio.php');
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
             }
         }
     }

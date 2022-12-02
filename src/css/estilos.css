@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400&family=Nunito:wght@300;400&display=swap');
 
 /* Eliminamos los valores del navegador por defecto */
@@ -9,10 +10,26 @@
 }
 
 html{
+=======
+
+/* Eliminamos los valores del navegador por defecto */
+*{
+	
+	padding: 0;
+	margin: 0;
+	font-family: Nunito;
+	text-decoration: none;
+	
+}
+
+html{
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	height: 100vh;
 }
 
 body{
+<<<<<<< HEAD
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(to bottom, #9851b8, #341741);
@@ -22,6 +39,15 @@ body{
 a{
 	text-decoration: none;
 	color: white;
+=======
+	
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 }
 
 /* DIVS a los que se hará referencia en cliente para el despliegue de su vista */
@@ -37,36 +63,62 @@ div#divCRUDcanciones, #divCRUDtemas, #divAnadirCanciones, #divPuntuacion, #divAn
 
 /* Propiedades que comparten todos los formularios */
 form#formulario{
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	width: 420px;
 	height: auto;
 	background-color: #794393;
 	text-align: center;		
 }
 
+<<<<<<< HEAD
 form#formulario input{
 	width: 70%;
 }
 
 /* Título de todos los formulario */
 h1.tituloInicio{
+=======
+/* Título de todos los formulario */
+h1.tituloInicio{
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	padding: 20px 0px 20px 0px;
 	text-align: center;
 	color: #F0E522;
 	font-weight: bold;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 }
 
 /* Inputs de todos los formularios */
 input.inputFormulario{
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	margin: auto;
 	margin-top: 10px;
 	width: 360px;
 	height: 40px;
 	border-radius: 5px;
 	padding-left: 15px;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 }
 
 /* Boton enviar de todos los formularios */
 input#inputEnviar{
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	margin: auto;
 	display: block;
 	margin-top: 70px;	
@@ -77,10 +129,13 @@ input#inputEnviar{
 	background-color: hsl(279, 75%, 57%);
 	border: none;
 	font-weight: bold;
+<<<<<<< HEAD
     justify-content: center;
 	cursor: pointer;
 	transition: all ease 0.8s;
 	border-radius: 5px;
+=======
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 }
 
 button#anadirRespuestas{
@@ -88,6 +143,7 @@ button#anadirRespuestas{
 	height: 30px;	
 }
 
+<<<<<<< HEAD
 input#inputEnviar:hover{
 	transform: scale(1.2); 
 	background-color: #F0E522;
@@ -229,10 +285,74 @@ div#contenidoCategorias{
 img#imgLuchas, #imgFeminismo, #imgLGTB{
 	width: 300px;
 	height: 300px;
+=======
+
+input#inputEnviar:hover{
+	
+	background-color: hsl(56, 100%, 70%);
+	color: black;
+	
+}
+/* Títulos de los inputs de los formularios */
+label.labelFormulario{
+	
+	color: white;
+	margin-top: 45px;
+	font-weight: bold;
+	
+}
+
+select#selectCategorias{
+	
+	width: 200px;
+	height: 30px;
+	margin-top: 15px;
+	
+}
+
+/* Aplicamos display inline-block para alinear las 3 categorias manteniendo su propiedad natural en bloque. */
+div#contenidoCategorias #luchasRaciales, #lgtbq, #feminismo{
+
+	display: inline-block;
+	margin: 30px;
+
+}
+
+div.categorias:hover{
+
+	transition: 2s;
+	transform: rotate3d(0, 20, 0, 180deg);
+	
+}
+
+div.categorias{
+
+	transition: 2s;
+	transform: rotate3d(0, 0, 0, 0deg);
+	
+}
+
+
+div#contenidoCategorias{
+
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+img#imgLuchas, #imgFeminismo, #imgLGTB{
+
+	width: 300px;
+	height: 300px;
+
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 }
 
 /* Botón de comenzar el juego */
 button#comenzarJuego{
+<<<<<<< HEAD
 	display: block;
     margin: auto;
 	font-size: 25px;
@@ -262,18 +382,53 @@ caption{
 
 table.tablasCRUD{
 	width: 60%;
+=======
+
+	display: block;
+	margin: auto;
+	width: 300px;
+	height: 90px;
+	font-size: 40px;
+	margin-top: 50px;
+	border: none;
+	background-color: #6f507e;
+	
+
+}
+
+button#comenzarJuego:hover{
+
+	background-color: #794393;
+	color: white;
+}
+
+
+/* Propiedades de las tablas que posee el administrador */
+table.tablasCRUD{
+	
+	width: 800px;
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	height: 300px;
 	background-color: #794393;
 	text-align: center;
 	border-collapse: collapse;
+<<<<<<< HEAD
 }
 
 table.tablasCRUD > thead{
+=======
+	
+}
+
+table.tablasCRUD > thead{
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	background-color: #544596;
 	color: yellow;
 }
 
 table.tablasCRUD > tbody{
+<<<<<<< HEAD
 	color: white;
 }
 
@@ -301,6 +456,17 @@ table.tablascanciones > tbody{
 table.tablascanciones > tbody > tr:nth-child(even){
 	background-color: #544596;	
 }
+=======
+	
+	color: white;
+	
+}
+
+table.tablasCRUD > tr:nth-child(even){
+	background-color: #544596;	
+}
+
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 
 h2.titulosCategorias{
 	text-align: center;
@@ -309,26 +475,53 @@ h2.titulosCategorias{
 }
 
 h2.titulosCategorias:hover{
+<<<<<<< HEAD
 	background-color: #8431aa;
 }
 
 button#anadirCancion{
 	width: 50px;
 	height: 50px;
+=======
+
+	background-color: #8431aa;
+
+}
+
+button#anadirCancion{
+	
+	width: 50px;
+	height: 50px;
+	
+}
+
+button#anadirCancion{
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	background-color: green;
 	font-size: 25px;
 	color: white;
 	border: none;
+<<<<<<< HEAD
 	cursor: pointer;
 }
 
 button.salirFormulario{
+=======
+	
+}
+
+
+button.salirFormulario{
+	
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 	border: none;
 	background-color: #794393;
 	font-weight: bold;
 	float: right;
 	width: 50px;
 	height: 50px;
+<<<<<<< HEAD
 }
 
 button.btnVolver{
@@ -357,10 +550,32 @@ button.btnVolver:hover {
 i{
 	cursor: pointer;
 }
+=======
+	
+}
+
+
+button.btnVolver{
+	
+	position: relative;
+	width: 100px;
+	height: 40px;
+	right: 880px;
+	bottom: 250px;
+	background-color: #794393;
+	border: none;
+	color: white;
+	
+}
+
+
+
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 
 span#comenzar{
    font-size: 15px;
 }
+<<<<<<< HEAD
 
 div#div1 {
     width: 100%;
@@ -396,10 +611,26 @@ button.opciones:hover {
     transform: scale(1.7); 
 }
 
+=======
+div#div1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button.opciones{
+    margin-top: 20px;
+    margin-right: 20px;
+    position: relative;
+    float: right;
+}
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 button#boton3{
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
 	cursor: pointer;
 	transition: all ease 0.8s;
     width: 180px;
@@ -449,6 +680,46 @@ a#enlaceequis:hover, button#equis:hover{
     background-color: red;
 }
 
+=======
+    width: 250px;
+    height: 60px;
+}
+div#divcerrar{
+    background-color: white;
+    width: 25%;
+    height: 50%;
+    margin:auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: 5px 10px 18px black;
+    align-items: center;
+    justify-content: center; 
+}
+table#tablaPuntos, td#tdPuntos, th#thPuntos{
+    border:1px black solid;
+    border-collapse: collapse;
+}
+table#tablaPuntos{
+  text-align: center;
+  vertical-align: middle;
+  margin:0 auto;
+  width: 75%;
+}
+div#divcomun2{
+    text-align: center;
+}
+button#equis{
+    border-radius: 50%;
+    float: right;
+    margin-top:2% ;
+    margin-right:-5% ;
+    cursor: pointer;
+    position: relative;
+}
+a#enlaceequis:hover, button#equis:hover{
+    background-color: red;
+}
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 div#divform{
     background-color: rgb(20, 148, 140);
     width: 25%;
@@ -459,17 +730,24 @@ div#divform{
     box-shadow: 5px 10px 18px black;
     text-align: center;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 input#terminos{
     align-items: center;
     justify-content: center;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 input#enviar{
     margin-top: 30px;
     align-items: center;
     justify-content: center;
 }
+<<<<<<< HEAD
 
 input#nombre{
     border-radius: 7%;
@@ -477,11 +755,19 @@ input#nombre{
 
 div#contenedor{
 	width: 100%;
+=======
+input#nombre{
+    border-radius: 7%;
+}
+div#contenedor{
+    width: 100%;
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+<<<<<<< HEAD
 
 div#divcerrar{
 	background-color: #794393;
@@ -560,12 +846,47 @@ div#divdrag3{
     margin-top: 3%;
 }
 
+=======
+header{
+    background-color: white;
+    height: 75px;   
+}
+button.btn-admin{
+    float: right;
+    margin-right: 50px;
+    margin-top: 25px;
+    height: 40px;
+    font-size: 15px;
+    width: 10%;
+}
+div#divinicial{
+    width: 100%;
+    height: 100%;
+}
+div#div0{
+    float: right;
+}
+div#divdrag{
+    text-align: center;
+    padding-top: 125px ;   
+}
+div#divdrag2,div#divdrag3 {
+    height: 80px;
+    background-color: rgb(99, 19, 119);
+    width: 75%;
+    margin-left: 150px;
+ }
+ div#divdrag3{
+    margin-top: 3%;
+}
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 span.opciones{
     background-color: white;
     padding: 2%;
     display: inline-block;
     border: 0.5px solid black;
     border-radius: 20%;
+<<<<<<< HEAD
     width: 35%;
     align-items: center;
     justify-content: center;
@@ -574,12 +895,19 @@ span.opciones{
 	flex-grow: 1; */
 }
 
+=======
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+}
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 div#divopcion{
     text-align: center;
     margin-top: 20px;
     align-items: center;
     justify-content: center;
 }
+<<<<<<< HEAD
 
 div#flecha{
    	position: absolute;
@@ -812,4 +1140,8 @@ div#flecha{
 
 header{
 	background-color: #341741 !important;
+=======
+div#flecha{
+   float: right;
+>>>>>>> 9f504ed23787d8116f63aadada68565a9076d850
 }
