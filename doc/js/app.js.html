@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: app.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: app.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ *	@file Contiene el controlador principal de la web.
+ *	@autor Domingo Miño Redondo
+ */
+import{Modelo} from './../modelos/modelo.js'
+import{VistaInicio} from './../vistas/vistainicio.js'
+import{VistaInstrucciones} from './../vistas/vistainstrucciones.js'
+import{VistaPuntos} from './../vistas/vistapuntos.js'
+import{VistaCategorias} from './../vistas/vistacategorias.js'
+import{VistaJuego} from './../vistas/vistajuego.js'
+/**
+ * Controlador de la aplicación
+ */
+class Controlador{
+	/**
+	 *	Constructor de la clase
+	 *	Llama al método iniciar al cargarse la página
+	 */
+	constructor(){
+		window.onload = this.iniciar.bind(this)
+	}
+	/**
+	 *	Inicia la aplicación
+	 *	Crea el modelo y las vistas.
+	 */
+	iniciar(){
+		this.modelo = new Modelo(this)
+		
+		this.divInicio = document.getElementById('inicio')
+		this.divInstrucciones = document.getElementById('instrucciones')
+		this.divPuntos = document.getElementById('puntos')
+		this.divCategorias = document.getElementById('categorias')
+		this.divJuego = document.getElementById('juego')
+		this.divlucha=document.getElementById('luchasRaciales')
+		this.divlgtb=document.getElementById('lgtbq')
+		this.divfeminismo=document.getElementById('feminismo')
+	
+		
+		
+		this.divInicio = new VistaInicio(this, this.divInicio)
+		this.divInstrucciones = new VistaInstrucciones(this, this.divInstrucciones)
+		this.divPuntos = new VistaPuntos(this, this.divPuntos)
+		this.divCategorias = new VistaCategorias(this, this.divCategorias)
+		this.divJuego = new VistaJuego(this, this.divJuego)
+		
+		this.divInicio.mostrar(true)
+
+		
+	}
+
+	/**
+	 *	Oculta todas las vistas menos iniciar.
+	 */
+	ocultarVistas(){
+	    this.divInstrucciones.mostrar(false)
+	    this.divPuntos.mostrar(false)
+	    this.divCategorias.mostrar(false)
+		this.divJuego.mostrar(false)
+	}
+
+	/**
+	 *	Atención a la pulsación del boton de instrucciones.
+	 */
+	pulsarInstrucciones(){
+		this.ocultarVistas()
+		this.divInstrucciones.mostrar(true)
+	}
+	/**
+	 *	Atención a la pulsación del boton de puntos.
+	 */
+	pulsarPuntos(){
+		this.ocultarVistas()
+		this.divPuntos.mostrar(true)
+	}
+	/**
+	 *	Atención a la pulsación del boton de elegir categorías.
+	 */
+	pulsarCategorias(){
+		this.ocultarVistas()
+		this.divCategorias.mostrar(true)
+	}
+
+	/**
+	 *  Llama al modelo para hacer la consulta con la categoría seleccionada
+	 * @param categoria {Number} Número identificativo de la categoría escogida por el usuario
+	 */
+	pulsarJuego(categoria){
+		this.modelo.getDatosCanciones(categoria)
+	}
+
+	/**
+	 * 	Manipula los datos devueltos del modelo para que sean más fáciles de utilizar en el juego
+	 * @param objetos {JSON} Coleccion de datos con las filas devueltas por la base de datos
+	 */
+	tratarDatos(objetos){
+		console.log(objetos)
+		let datosCanciones = {}
+		datosCanciones.id = new Set()
+		datosCanciones.audio = new Set()
+		datosCanciones.respuesta_correcta = new Set()
+		for(let objeto of objetos){
+			datosCanciones.id.add(objeto.id)
+			datosCanciones.audio.add(objeto.audio)
+			datosCanciones.respuesta_correcta.add(objeto.respuesta_correcta)
+		}
+		datosCanciones.id = [... datosCanciones.id]
+		datosCanciones.audio = [... datosCanciones.audio]
+		datosCanciones.respuesta_correcta = [... datosCanciones.respuesta_correcta]
+
+		let canciones = []
+		for(let i=0;i&lt;datosCanciones.id.length;i++){
+			canciones[i] = {}
+			canciones[i].id = datosCanciones.id[i]
+			canciones[i].audio = datosCanciones.audio[i]
+			canciones[i].respuesta_correcta = datosCanciones.respuesta_correcta[i]
+			canciones[i].luchas = [[1, "Identidad de Género"], [2, "Discriminación"], [3, "Maltrato contra la mujer"]]
+			canciones[i].respuestas = []
+		}
+
+		console.log(canciones)
+
+		for(let i=0;i&lt;objetos.length;i++){
+			for(let j=0;j&lt;canciones.length;j++){
+				if(objetos[i].id==canciones[j].id){
+					let respuesta = []
+					respuesta.push(objetos[i].num_respuesta)
+					respuesta.push(objetos[i].titulo)
+					canciones[j].respuestas.push(respuesta)
+				}
+			}
+		}
+
+		this.elegirCancion(canciones)
+
+	}
+
+	/**
+	 *	Elige una de las canciones al azar
+	 * @param canciones {Array} Colección de canciones de la misma categoría
+	 */
+	elegirCancion(canciones){
+		if(canciones.length>0){
+			this.ocultarVistas()
+			this.divJuego.mostrar(true)
+			let eleccion = Math.floor(Math.random() * canciones.length)
+			this.divJuego.mostrarCancion(canciones[eleccion])
+		}else{
+			window.alert('Esta categoría no tiene canciones')
+		}
+	}
+
+	
+	/**
+	 *	Atención a la pulsación de la imagen de luchas sociales(se añade borde).
+	 */
+	bordelucha(){
+		this.ocultarborde()
+		this.divlucha.borde(true)
+		
+	}
+	/**
+	 *	Atención a la pulsación de la imagen de lgtb(se añade borde).
+	 */
+	bordelgtb(){		
+		this.ocultarborde()
+		this.divlgtb.borde(true)
+		
+	}
+	/**
+	 *	Atención a la pulsación de la imagen de feminismo(se añade borde).
+	 */
+	bordefeminismo(){
+		this.ocultarborde()
+		this.divfeminismo.borde(true)
+		
+	}
+	
+}
+
+const app = new Controlador()</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Controlador.html">Controlador</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Thu Dec 01 2022 17:27:21 GMT+0100 (hora estándar de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

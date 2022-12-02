@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400&family=Nunito:wght@300;400&display=swap');
+
+/* Eliminamos los valores del navegador por defecto */
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Fira Sans;
+	text-decoration: none;
+}
+
+html{
+	height: 100vh;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, #9851b8, #341741);
+}
+
+/* Resetear estilos de enlaces */
+a{
+	text-decoration: none;
+	color: white;
+}
+
+/* DIVS a los que se hará referencia en cliente para el despliegue de su vista */
+div#divCRUDcanciones, #divCRUDtemas, #divAnadirCanciones, #divPuntuacion, #divAnadirTemas, #divRegistro, #divLogin{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+/* Propiedades que comparten todos los formularios */
+form#formulario{
+	width: 420px;
+	height: auto;
+	background-color: #794393;
+	text-align: center;		
+}
+
+form#formulario input{
+	width: 70%;
+}
+
+/* Título de todos los formulario */
+h1.tituloInicio{
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	color: #F0E522;
+	font-weight: bold;
+}
+
+/* Inputs de todos los formularios */
+input.inputFormulario{
+	margin: auto;
+	margin-top: 10px;
+	width: 360px;
+	height: 40px;
+	border-radius: 5px;
+	padding-left: 15px;
+}
+
+/* Boton enviar de todos los formularios */
+input#inputEnviar{
+	margin: auto;
+	display: block;
+	margin-top: 70px;	
+	margin-bottom: 20px;
+	width: 180px;
+	height: 60px;
+	color: white;
+	background-color: hsl(279, 75%, 57%);
+	border: none;
+	font-weight: bold;
+    justify-content: center;
+	cursor: pointer;
+	transition: all ease 0.8s;
+	border-radius: 5px;
+}
+
+button#anadirRespuestas{
+	width: 50px;
+	height: 30px;	
+}
+
+input#inputEnviar:hover{
+	transform: scale(1.2); 
+	background-color: #F0E522;
+	color: hsl(279, 75%, 57%);
+}
+
+/* Títulos de los inputs de los formularios */
+label.labelFormulario{
+	color: white;
+	margin-top: 45px;
+	font-weight: bold;
+}
+
+select#selectCategorias{
+	width: 200px;
+	height: 30px;
+	margin-top: 15px;
+}
+
+/* Aplicamos display inline-block para alinear las 3 categorias manteniendo su propiedad natural en bloque. */
+div#contenidoCategorias{
+	display: flex;
+}
+
+div#luchasRaciales, div#lgtbq, div#feminismo{
+	display: flex;
+	margin: 30px;
+	flex-direction: column;	flex-direction: column;
+}
+
+div.categorias:hover{
+	transition: 1s;
+	transform: scale(1.2);
+}
+
+div.categorias{
+	transition: 1s;
+	transform: rotate3d(0, 0, 0, 0deg);
+}
+
+div#imagenlucha{
+	display: flex;
+	background-image: url("http://localhost/2223_2DAW_Adivina_la_cancion/src/img/luchas1.jpg");
+	width: 300px;
+	height: 300px;
+}
+
+div#textolucha{
+	background-color: rgba(31, 31, 31, 0.9);
+	transition: opacity 1s;
+	opacity: 0;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+
+div#imagenlucha:hover div#textolucha{
+	opacity: 1.5;
+}
+
+p#infolucha{
+	color: aliceblue;
+	position: absolute;
+	margin-top: 50px;
+	margin-right: 40px;
+	margin-left: 40px;
+	font-size: 21px;
+}
+
+div#imagenlgtbq{
+	display: flex;
+	background-image: url("http://localhost/2223_2DAW_Adivina_la_cancion/src/img/lgtb1.jpg");
+	width: 300px;
+	height: 300px;
+}
+
+div#textolgtbq{
+	background-color: rgba(31, 31, 31, 0.9);
+	transition: opacity 1s;
+	opacity: 0;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+
+div#imagenlgtbq:hover div#textolgtbq{
+	opacity: 1.5;
+}
+
+p#infolgtbq{
+	color: aliceblue;
+	position: absolute;
+	margin-top: 50px;
+	margin-right: 40px;
+	margin-left: 40px;
+	font-size: 21px;
+}
+
+div#imagenfem{
+	display: flex;
+	background-image: url("http://localhost/2223_2DAW_Adivina_la_cancion/src/img/feminismo1.jpg");
+	width: 300px;
+	height: 300px;
+}
+
+div#textofem{
+	background-color: rgba(31, 31, 31, 0.9);
+	transition: opacity 1s;
+	opacity: 0;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+
+div#imagenfem:hover div#textofem{
+	opacity: 1.5;
+}
+
+p#infofem{
+	color: aliceblue;
+	position: absolute;
+	margin-top: 50px;
+	margin-right: 40px;
+	margin-left: 40px;
+	font-size: 21px;
+}
+
+div#contenidoCategorias{
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+img#imgLuchas, #imgFeminismo, #imgLGTB{
+	width: 300px;
+	height: 300px;
+}
+
+/* Botón de comenzar el juego */
+button#comenzarJuego{
+	display: block;
+    margin: auto;
+	font-size: 25px;
+    justify-content: center;
+	cursor: pointer;
+	transition: all ease 0.8s;
+    width: 180px;
+    height: 60px;
+    color: white;
+    background-color: hsl(279, 75%, 57%);
+    border: none;
+    font-weight: bold;
+	border-radius: 5px;
+}
+ 
+button#comenzarJuego:hover{
+    transform: scale(1.3); 
+	background-color: #F0E522;
+	color: hsl(279, 75%, 57%);
+}
+
+/* Propiedades de las tablas que posee el administrador */
+caption{
+	color: white;
+	font-weight: bold;
+}
+
+table.tablasCRUD{
+	width: 60%;
+	height: 300px;
+	background-color: #794393;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+table.tablasCRUD > thead{
+	background-color: #544596;
+	color: yellow;
+}
+
+table.tablasCRUD > tbody{
+	color: white;
+}
+
+table.tablasCRUD > tbody > tr:nth-child(even){
+	background-color: #544596;	
+}
+
+table.tablascanciones{
+	width: 60%;
+	height: 100px;
+	background-color: #794393;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+table.tablascanciones > thead{
+	background-color: #544596;
+	color: yellow;
+}
+
+table.tablascanciones > tbody{
+	color: white;
+}
+
+table.tablascanciones > tbody > tr:nth-child(even){
+	background-color: #544596;	
+}
+
+h2.titulosCategorias{
+	text-align: center;
+	color: white;
+	background-color: #794393;
+}
+
+h2.titulosCategorias:hover{
+	background-color: #8431aa;
+}
+
+button#anadirCancion{
+	width: 50px;
+	height: 50px;
+	background-color: green;
+	font-size: 25px;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+button.salirFormulario{
+	border: none;
+	background-color: #794393;
+	font-weight: bold;
+	float: right;
+	width: 50px;
+	height: 50px;
+}
+
+button.btnVolver{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 100px;
+	height: 40px;
+	background-color: #794393;
+	border: none;
+	color: white;
+	cursor: pointer;
+	transition: all ease 0.8s;
+    color: white;
+    border: none;
+    font-weight: bold;
+	border-radius: 5px;
+}
+
+button.btnVolver:hover {
+    transform: scale(1.3); 
+	background-color: #F0E522;
+	color: hsl(279, 75%, 57%);
+}
+
+i{
+	cursor: pointer;
+}
+
+span#comenzar{
+   font-size: 15px;
+}
+
+div#div1 {
+    width: 100%;
+    height: 90%;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#div2 {
+	position: absolute;
+	top: 2vh;
+	right: 2%;
+}
+
+div#aviso{
+	display: none;
+}
+
+button.opciones{
+    margin-top: 40px;
+    margin-right: 40px;
+    position: relative;
+    float: right;
+	background-color: transparent;
+	transition: all ease 0.8s;
+	border: none;
+	cursor: pointer;
+}
+
+button.opciones:hover {
+    transform: scale(1.7); 
+}
+
+button#boton3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	cursor: pointer;
+	transition: all ease 0.8s;
+    width: 180px;
+    height: 60px;
+    color: white;
+    background-color: hsl(279, 75%, 57%);
+    border: none;
+    font-weight: bold;
+	border-radius: 5px;
+}
+ 
+button#boton3:hover {
+    transform: scale(1.5); 
+	background-color: #F0E522;
+	color: hsl(279, 75%, 57%);
+}
+
+table#tablaPuntos{
+	border:1px black solid;
+    border-collapse: collapse;
+	text-align: center;
+	vertical-align: middle;
+	margin:0 auto;
+	width: 75%;
+}
+
+#tablaPuntos td, #tablaPuntos th{
+	border:1px black solid;
+    border-collapse: collapse;
+}
+
+div#divcomun2{
+    text-align: center;
+}
+
+button#equis{
+    border-radius: 50%;
+    float: right;
+	width: 20px;
+	height: 20px;
+    margin-top:2% ;
+    margin-right:-5% ;
+    cursor: pointer;
+}
+
+a#enlaceequis:hover, button#equis:hover{
+    background-color: red;
+}
+
+div#divform{
+    background-color: rgb(20, 148, 140);
+    width: 25%;
+    height: 50%;
+    margin:auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: 5px 10px 18px black;
+    text-align: center;
+}
+
+input#terminos{
+    align-items: center;
+    justify-content: center;
+}
+
+input#enviar{
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+input#nombre{
+    border-radius: 7%;
+}
+
+div#contenedor{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#divcerrar{
+	background-color: #794393;
+	color: white;
+    width: 25%;
+	min-width: 222px;
+    height: 50%;
+    margin:auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: 5px 10px 18px black;
+    align-items: center;
+    justify-content: center; 
+}
+
+div#divcerrar h1{
+	color: #F0E522;
+}
+
+ul {
+	padding-left: 2rem;
+	list-style-type: none;
+	word-spacing: 40px;
+	color: white;
+}
+
+ul li {
+	background-color: black;
+	width: 150px;
+	text-align: center;
+	font-size: 25px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+    background-color: transparent;
+	width: 100%;
+    height: 75px;   
+}
+
+div#divinicial{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    width: 100%;
+    height: 80%;
+	flex-direction: column;
+}
+
+div#div0{
+	position: relative;
+	text-align: right;
+	width: 100%;
+	height: 10%;
+	padding: 25px 25px 0 0;
+}
+
+div#divdrag{
+    text-align: center;
+	width: 80%;
+}
+
+div#divdrag2,div#divdrag3 {
+	display: flex;
+    height: 80px;
+    background-color: rgb(99, 19, 119);
+    width: 100%;
+}
+
+div#divdrag3{
+    margin-top: 3%;
+}
+
+span.opciones{
+    background-color: white;
+    padding: 2%;
+    display: inline-block;
+    border: 0.5px solid black;
+    border-radius: 20%;
+    width: 35%;
+    align-items: center;
+    justify-content: center;
+	margin: 10px;
+	/* flex-shrink: 1;
+	flex-grow: 1; */
+}
+
+div#divopcion{
+    text-align: center;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+div#flecha{
+   	position: absolute;
+	bottom: 2vh;
+	right: 3%;
+}
+
+/* Media Queries */
+
+/* Dispositivos pequeños (móviles, 600px <) */
+@media only screen and (max-width: 600px) {
+	button#boton3 {
+		display: none;
+	}
+
+	img#logoinicio{
+		display: none;
+	}
+
+	div#aviso{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		background-color: hsl(279, 75%, 57%);
+		font-weight: bold;
+		border-radius: 5px;
+		margin: 20px;
+		text-align: center;
+	}
+	nav{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 108px;   
+		width: 100%;
+	}
+	ul{
+		width: 100%;
+	}
+	ul li {
+		background-color: black;
+		width: 100%;
+		text-align: center;
+		font-size: 25px;
+		display: block;
+		margin-top: 3px;
+		cursor: pointer;
+	}
+	table.tablasCRUD{
+		width: 100%;
+		height: 300px;
+		background-color: #794393;
+		text-align: center;
+		border-collapse: collapse;
+	}
+	div#divcerrar{
+		width: 70%;
+	}
+	button#equis{
+		margin-right: 5px;
+	}
+}
+
+/* Dispositivos medianos (tablets, 768px < 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	h2.titulosCategorias {
+		font-size: 15px;
+	}
+
+	div#contenidoCategorias {
+		margin-top: 40px;
+	}
+
+	div#luchasRaciales, div#lgtbq, div#feminismo {
+		display: flex;
+		margin: 30px 15px;
+		flex-direction: column;
+	}
+
+	div.categorias:hover {
+		transition: 1s;
+		transform: scale(1.2);
+	}
+
+	div.categorias {
+		transition: 1s;
+		transform: rotate3d(0, 0, 0, 0deg);
+	}
+
+	div#imagenlucha {
+		display: flex;
+		background-image: url("http://localhost/2223_2DAW_Adivina_la_cancion/src/img/luchas2.jpg");
+		width: 150px;
+		height: 150px;
+	}
+
+	div#textolucha {
+		background-color: rgba(31, 31, 31, 0.9);
+		transition: opacity 1s;
+		opacity: 0;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
+	}
+
+	div#imagenlucha:hover div#textolucha {
+		opacity: 1.5;
+	}
+
+	p#infolucha {
+		color: aliceblue;
+		position: absolute;
+		margin-top: 25px;
+		margin-right: 20px;
+		margin-left: 20px;
+		font-size: 10px;
+	}
+
+	div#imagenlgtbq {
+		display: flex;
+		background-image: url("http://localhost/2223_2DAW_Adivina_la_cancion/src/img/lgtb2.jpg");
+		width: 150px;
+		height: 150px;
+	}
+
+	div#textolgtbq {
+		background-color: rgba(31, 31, 31, 0.9);
+		transition: opacity 1s;
+		opacity: 0;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
+	}
+
+	div#imagenlgtbq:hover div#textolgtbq {
+		opacity: 1.5;
+	}
+
+	p#infolgtbq {
+		color: aliceblue;
+		position: absolute;
+		margin-top: 25px;
+		margin-right: 20px;
+		margin-left: 20px;
+		font-size: 10px;
+	}
+
+	div#imagenfem {
+		display: flex;
+		background-image: url("http://localhost/2223_2DAW_Adivina_la_cancion/src/img/feminismo2.jpg");
+		width: 150px;
+		height: 150px;
+	}
+
+	div#textofem {
+		background-color: rgba(31, 31, 31, 0.9);
+		transition: opacity 1s;
+		opacity: 0;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
+	}
+
+	div#imagenfem:hover div#textofem {
+		opacity: 1.5;
+	}
+
+	p#infofem {
+		color: aliceblue;
+		position: absolute;
+		margin-top: 25px;
+		margin-right: 20px;
+		margin-left: 20px;
+		font-size: 10px;
+	}
+
+	div#contenidoCategorias {
+		height: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	img#imgLuchas, #imgFeminismo, #imgLGTB {
+		width: 150px;
+		height: 150px;
+	}
+
+	button#comenzarJuego {
+		width: 100px;
+		height: 40px;
+		font-size: 14px;
+	}
+}
+
+#instrucciones, #puntos, #categorias, #juego {
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	opacity: 0;
+	display: flex;
+	background-color: hsla(0, 0%, 85%, 0.1);
+	backdrop-filter: blur(20px);
+	visibility: hidden;
+	justify-content: center;
+	align-items: center;
+}
+
+#luchas{
+	display: flex;
+	flex-direction: row;
+}
+
+#juego{
+	flex-direction: column;
+}
+
+#salirJuego{
+	position: absolute ;
+	top: 3vh;
+	left: 3%;
+}
+
+header{
+	background-color: #341741 !important;
+}

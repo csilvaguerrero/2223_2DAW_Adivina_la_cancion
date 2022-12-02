@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="45d25da5-e33b-4518-9f51-6b0978596380" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/inicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/inicio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/inicioadmin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/instrucciones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/puntuacion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modelos/modelo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modelos/modelo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/servicios/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/servicios/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vistas/vista.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vista.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vistas/vistacategorias.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vistacategorias.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vistas/vistainicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vistainicio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vistas/vistainstrucciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vistainstrucciones.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vistas/vistajuego.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vistajuego.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/libreria/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/libreria/app.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2I0bkwWUmCpDGJLOgWrWlGbIVPE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/2223_2DAW_Adivina_la_cancion/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\2223_2DAW_Adivina_la_cancion\src\php\doc" />
+      <recent name="C:\xampp\htdocs\2223_2DAW_Adivina_la_cancion\src\php\login-admin\instalacion" />
+      <recent name="C:\xampp\htdocs\2223_2DAW_Adivina_la_cancion\src\php\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\2223_2DAW_Adivina_la_cancion\src\php\vistas\admin" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45d25da5-e33b-4518-9f51-6b0978596380" name="Changes" comment="" />
+      <created>1669321594616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669321594616</updated>
+      <workItem from="1669321595774" duration="4122000" />
+      <workItem from="1669364258300" duration="40194000" />
+      <workItem from="1669549228559" duration="8829000" />
+      <workItem from="1669569652909" duration="155000" />
+      <workItem from="1669621170270" duration="1479000" />
+      <workItem from="1669656261202" duration="5749000" />
+      <workItem from="1669709754372" duration="10427000" />
+      <workItem from="1669726926854" duration="627000" />
+      <workItem from="1669744743393" duration="745000" />
+      <workItem from="1669750924688" duration="34000" />
+      <workItem from="1669751052330" duration="75000" />
+      <workItem from="1669793212749" duration="12536000" />
+      <workItem from="1669839297513" duration="421000" />
+      <workItem from="1669842017540" duration="2007000" />
+      <workItem from="1669879617801" duration="12536000" />
+      <workItem from="1669926720978" duration="1749000" />
+      <workItem from="1669968017905" duration="4560000" />
+      <workItem from="1669973588105" duration="1080000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
