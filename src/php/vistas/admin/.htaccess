@@ -1,7 +1,0 @@
-AuthName "Necesitas autorización para entrar aquí"
-#Servidor
-#AuthUserFile /adivina-cancion/.htpasswd
-#Local
-AuthUserFile C:\xampp\htdocs\2223_2DAW_Adivina_la_cancion\src\.htpasswd
-AuthType Basic
-require user playbackend
