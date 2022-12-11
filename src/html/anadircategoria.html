@@ -18,43 +18,59 @@
 <body>
 <div id="divAnadirCanciones">
   <a href="crudcanciones.html"><span class="salir">Volver</span></a>
-  <form class="formulario">
-    <h1 class="tituloInicio">Temas de lucha de la canción</h1>
+  <h1 class="tituloInicio">Añadir categoría</h1>
+  <form class="formulario" id="form-categoria">
     <div>
-      <label class="labelFormulario">Temas de lucha</label>
-      <select>
-        <option>Misoginia</option>
-        <option>Discriminación</option>
-        <option>Xenofobia</option>
-      </select>
-      <button id="anadirRespuestas">+</button>
+      <div>
+        <label class="labelFormulario" for="nombre-categoria">Nombre de la categoría</label>
+        <input type=text name="nombre-categoria" id="nombre-categoria"/>
+      </div>
+      <div>
+        <input type="file" class="inputFormulario" id="inputImagen" accept=".jpg" />
+        <label for="inputImagen" class="labelFormulario" id="seleccionar-imagen">
+          Selecciona una imagen
+          <i class="fa-solid fa-image"></i>
+        </label>
+      </div>
+      <div>
+        <label class="labelFormulario" for="descripcion-categoria">Descripción de la categoría</label>
+        <textarea type=text name="descripcion-categoria" id="descripcion-categoria"></textarea>
+      </div>
     </div>
     <div>
-      <label class="labelFormulario">Temas de lucha añadidos</label>
-      <table>
-        <thead>
+      <div>
+        <label class="labelFormulario">Temas de lucha</label>
+        <select>
+          <option>Misoginia</option>
+          <option>Discriminación</option>
+          <option>Xenofobia</option>
+        </select>
+        <button id="anadirRespuestas">+</button>
+      </div>
+      <div>
+        <label class="labelFormulario">Temas de lucha añadidos</label>
+        <table>
+          <thead>
           <tr>
-            <td></td>
             <td>Tema de lucha</td>
             <td>Quitar</td>
           </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
           <tr>
-            <td><input type="checkbox"></td>
             <td>Racismo</td>
             <td><button id="anadirRespuestas">-</button></td>
           </tr>
           <tr>
-            <td><input type="checkbox"></td>
             <td>Violencia contra la mujer</td>
             <td><button id="anadirRespuestas">-</button></td>
           </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div  class="btn btn-primary" id="enviar-datos">Añadir canción</div>
   </form>
+  <div class="btn btn-primary" id="anadir-categoria">Añadir</i></div>
 </div>
 <script src="https://kit.fontawesome.com/f7b55e9c0a.js" crossorigin="anonymous"></script>
 </body>
