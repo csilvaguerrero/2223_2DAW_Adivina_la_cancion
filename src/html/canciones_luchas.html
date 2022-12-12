@@ -21,13 +21,13 @@
   <form class="formulario">
     <h1 class="tituloInicio">Temas de lucha de la canción</h1>
     <div>
-      <label class="labelFormulario">Temas de lucha</label>
-      <select>
+      <label for="seleccion-temas" class="labelFormulario">Temas de lucha</label>
+      <select id="seleccion-temas">
         <option>Misoginia</option>
         <option>Discriminación</option>
         <option>Xenofobia</option>
       </select>
-      <button id="anadirRespuestas">+</button>
+      <button class="anadirRespuestas">+</button>
     </div>
     <div>
       <label class="labelFormulario">Temas de lucha añadidos</label>
@@ -41,14 +41,14 @@
         </thead>
         <tbody>
           <tr>
-            <td><input type="checkbox"></td>
+            <td><label for="check-1" hidden>Respuesta 1</label><input type="checkbox" id="check-1"></td>
             <td>Racismo</td>
-            <td><button id="anadirRespuestas">-</button></td>
+            <td><button class="anadirRespuestas">-</button></td>
           </tr>
           <tr>
-            <td><input type="checkbox"></td>
+            <td><label for="check-2" hidden>Respuesta 2</label><input type="checkbox" id="check-2"></td>
             <td>Violencia contra la mujer</td>
-            <td><button id="anadirRespuestas">-</button></td>
+            <td><button class="anadirRespuestas">-</button></td>
           </tr>
         </tbody>
       </table>

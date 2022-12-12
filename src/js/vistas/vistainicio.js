@@ -1,34 +1,1 @@
-/**
- *	@file Contiene el modelo de la vista del inicio de la web.
- *	@autor Domingo Miño Redondo
- */
-
-import {Vista} from './vista.js'
-
-/**
- *	Implementa una vista del menú de navegación.
- */
-export class VistaInicio extends Vista{
-	/**
-	 *	Constructor de la clase.
-	 *	@param controlador {Controlador} Controlador de la vista.
-	 *	@param div {HtmldivElement} div de HTML en el que se desplegará la vista de inicio.
-	 */
-	constructor(controlador, div){
-		super(div)
-		this.controlador = controlador
-
-		this.divBotones = document.getElementById('div2');
-
-		if(document.getElementsByTagName('header')[0]){
-			this.menuAdmin = document.getElementById('barra-admin');
-			this.moverMenuAdmin();
-		}
-
-	}
-
-	moverMenuAdmin(){
-		this.divBotones.style.position = "absolute";
-		this.divBotones.style.top = "7vh";
-	}
-}
+/** *	@file Contiene el modelo de la vista del inicio de la web. *	@autor Domingo Miño Redondo */import {Vista} from './vista.js'/** *	Implementa una vista del menú de navegación. */export class VistaInicio extends Vista{	/**	 *	Constructor de la clase.	 *	@param controlador {Controlador} Controlador de la vista.	 *	@param div {HtmldivElement} div de HTML en el que se desplegará la vista de inicio.	 */	constructor(controlador, div){		super(div)		this.controlador = controlador		this.divBotones = document.getElementById('div2');		this.reproductor = document.getElementById('cancion-fondo');		this.reproducirMusica = document.getElementById('reproducir');		this.reproducirMusica.addEventListener('click', this.reproducir.bind(this));		this.pararMusica = document.getElementById('parar');		this.pararMusica.addEventListener('click', this.parar.bind(this));		if(document.getElementsByTagName('header')[0]){			this.menuAdmin = document.getElementById('barra-admin');			this.moverMenuAdmin();		}	}	moverMenuAdmin(){		this.divBotones.style.position = "absolute";		this.divBotones.style.top = "100px";	}	reproducir(){		this.pararMusica.style.display = "block";		this.reproducirMusica.style.display = "none";		this.reproductor.play();	}	parar(){		this.pararMusica.style.display = "none";		this.reproducirMusica.style.display = "block";		this.reproductor.pause();	}}
