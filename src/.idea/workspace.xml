@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45d25da5-e33b-4518-9f51-6b0978596380" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilos.css" afterDir="false" />
@@ -20,6 +21,13 @@
       <change beforePath="$PROJECT_DIR$/js/vistas/vistainstrucciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vistainstrucciones.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/vistas/vistajuego.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vistajuego.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/libreria/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/libreria/app.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/js/modelos/consultarCanciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/js/modelos/consultarCanciones.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modelos/modelo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modelos/modelo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/servicios/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/servicios/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vistas/vistacategorias.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vistacategorias.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vistas/vistajuego.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vistas/vistajuego.js" afterDir="false" />
+>>>>>>> 9fbd117503617ee6c16ba721e4b90a5b8499a074
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,10 +104,14 @@
       <workItem from="1669793212749" duration="12536000" />
       <workItem from="1669839297513" duration="421000" />
       <workItem from="1669842017540" duration="2007000" />
+<<<<<<< HEAD
       <workItem from="1669879617801" duration="12536000" />
       <workItem from="1669926720978" duration="1749000" />
       <workItem from="1669968017905" duration="4560000" />
       <workItem from="1669973588105" duration="1080000" />
+=======
+      <workItem from="1669879617801" duration="11940000" />
+>>>>>>> 9fbd117503617ee6c16ba721e4b90a5b8499a074
     </task>
     <servers />
   </component>

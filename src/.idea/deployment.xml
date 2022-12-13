@@ -5,7 +5,11 @@
       <paths name="2daw">
         <serverdata>
           <mappings>
+<<<<<<< HEAD
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+=======
+            <mapping local="$PROJECT_DIR$" web="/" />
+>>>>>>> 9fbd117503617ee6c16ba721e4b90a5b8499a074
           </mappings>
         </serverdata>
       </paths>
