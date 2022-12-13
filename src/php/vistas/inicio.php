@@ -1,16 +1,1 @@
-<?php
-    session_start();
-    if(session_status()==PHP_SESSION_ACTIVE && isset($_SESSION['admin'])){
-        echo    '<header>
-                    <div>
-                        <h1>ADIVINA LA CANCIÓN</h1>
-                    </div>
-                    <a href="../../html/crudcanciones.html">Gestiónar canciones</a>
-                    <a href="../../html/crudtemas.html">Gestiónar temas de lucha</a>
-                    <div id="admin">
-                        <span>'.$_SESSION['admin']['nombre'].'</span>
-                        <a href="logout.php">Cerrar sesión</a>
-                    </div>
-                </header>';
-    }
-    include '../../html/inicio.html';
+<?php    session_start();    if(session_status()==PHP_SESSION_ACTIVE && isset($_SESSION['admin'])){        echo    '<header id="barra-admin">                    <nav>                        <div id="usuario">                            <div>                                <img src="img/logo.png" alt="Imagotipo" class="logo" />                            </div>                            <span>'.$_SESSION['admin']['nombre'].'</span>                        </div>                        <input type="checkbox" id="hamburguesa">                        <label for="hamburguesa" class="menu-hamburguesa">                            <span hidden>Check para menú responsive</span>                            <div class="fa-solid fa-bars"></div>                        </label>                        <ul class="nav-menu">                            <li>Inicio</li>                            <li><a href="html/crudcanciones.html">Canciones</a></li>                            <li><a href="html/crudtemas.html">Temas de lucha</a></li>                            <li id="cerrar-sesion"><a href="php/vistas/logout.php">Cerrar sesión</a></li>                        </ul>                    </nav>                </header>';    }    include 'html/inicio.html';
