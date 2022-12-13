@@ -1,11 +1,15 @@
 <?php
     if(isset($_POST['anadir'])){    // Si se presiona el botón añadir
-        $servidor = "localhost";
-        $usuario = "root";
-        $contrasenia = "";
-        $bd = "adivina_la_cancion";
+        /*
+        $servidor = "2daw.esvirgua.com";
+        $usuario = "user2daw_08";
+        $contrasenia = "HSIDt+WKU}E%";
+        $bd = "user2daw_BD1-08";
+        */
+        
+        include "config.php";
         $conexion = new mysqli($servidor, $usuario, $contrasenia, $bd);
-    
+
         // Guardar valores en variables
         $categoria = $_POST['nombre_categoria'];
         $imagen = $_POST['imagen'];
@@ -21,6 +25,7 @@
         // Informar si se ha guardado correctamente o no los datos de la tabla categorías
         if($conexion->query($sql_categorias))
         {
+            
             echo "Se añadio correctamente <br>";
             echo "La categoría es: ".$categoria."<br>";
             echo "La imagen para el fonto es: ".$imagen."<br>";
@@ -29,7 +34,7 @@
         else{
             echo "No se ha introducido datos o esta repetido";
         }
-        // Guardo el id del último registro de categorías
+        // Guardo el id del último registro (categorías)
         $id_categoria = $conexion->insert_id;
         echo "categoria id es: ".$id_categoria;
 
@@ -42,7 +47,7 @@
         else{
             echo "No se ha introducido datos o esta repetido";
         }
-        // Guardo el id del último registro de categorías
+        // Guardo el id del último registro (temas)
         $id_temas = $conexion->insert_id;
         echo "tema id es: ".$id_temas;
 
@@ -59,7 +64,7 @@
         else{
             echo "No se ha introducido datos o esta repetido";
         }
-        
+
         /* 
         $id_categoria = $conexion->insert_id;
         echo "El id de la categoría añadida es: ".$id_categoría;
