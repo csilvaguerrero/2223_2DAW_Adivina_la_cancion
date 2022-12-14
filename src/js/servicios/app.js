@@ -184,8 +184,6 @@ class Controlador{
 		datosCanciones.audio = [... datosCanciones.audio]
 		datosCanciones.respuesta_correcta = [... datosCanciones.respuesta_correcta]
 
-
-
 		let canciones = []
 
 		for(let i=0;i<datosCanciones.id.length;i++){

@@ -23,7 +23,9 @@
     <div>
       <div>
         <label class="labelFormulario" for="nombre-categoria">Nombre de la categoría</label>
-        <input type=text name="nombre-categoria" id="nombre-categoria"/>
+        <input type=text name="nombre-categoria" id="nombre-categoria" maxlength="20"/>
+        <br/>
+        <span id="advertenciaNombre" hidden></span>
       </div>
       <div>
         <input type="file" class="inputFormulario" id="inputImagen" accept=".jpg" />
@@ -34,7 +36,9 @@
       </div>
       <div>
         <label class="labelFormulario" for="descripcion-categoria">Descripción de la categoría</label>
-        <textarea type=text name="descripcion-categoria" id="descripcion-categoria"></textarea>
+        <textarea type=text name="descripcion-categoria" id="descripcion-categoria" maxlength="500"></textarea>
+        <br/>
+        <span id="advertenciaDescripcion" hidden></span>
       </div>
     </div>
     <div>
@@ -42,6 +46,7 @@
         <label for="categoria-tema" class="labelFormulario">Temas de lucha</label>
         <input type="text" id="categoria-tema">
         <button class="anadirRespuestas" id="anadir-temas">+</button>
+        <span id="advertenciaTema" hidden>No has añadido ningún tema de lucha.</span>
       </div>
       <div>
         <label class="labelFormulario">Temas de lucha añadidos</label>
@@ -59,8 +64,9 @@
     </div>
   </form>
   <input type="submit" id="anadir-categoria"/>
+  <span id="advertenciaFormulario" hidden>No se han introducido todos los datos, inténtalo de nuevo.</span>
 </div>
-<script src="validacionesCategorias.js"></script>
+<script src="../js/servicios/validacionesCategorias.js"></script>
 <script src="https://kit.fontawesome.com/f7b55e9c0a.js" crossorigin="anonymous"></script>
 </body>
 </html>

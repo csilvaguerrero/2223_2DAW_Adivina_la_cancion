@@ -26,11 +26,7 @@ export class Modelo{
 
 	constructor(controlador){
 
-
-
 		this.controlador = controlador
-
-
 
 	}
 
@@ -51,13 +47,9 @@ export class Modelo{
 		console.log(categoria)
 
 		fetch("js/modelos/consultarCanciones.php" + "?categoria=" + categoria)
-
 			.then(respuesta => respuesta.json())
-
 			.then(objeto => this.controlador.tratarDatos(objeto))
-
 			// .then(objeto => console.log(objeto))
-
 			.catch(error => console.log("KAPPUT: " + error))
 
 	}

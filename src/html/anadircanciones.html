@@ -39,6 +39,8 @@
 					<label for="inputAnadir" hidden>Posible titulo de la cancion</label>
 					<input type=text name="nombre-cancion" id="inputAnadir"/>
 					<button name="Añadir" id="AnadirRespuesta" class="botonform">Añadir respuesta</button>
+					<br/><br/>
+					<span id="anadirRespuestas" hidden></span>
 					<br><br>
 					<table id="tabla">
 						<thead>
@@ -49,24 +51,19 @@
 							</tr>
 						</thead>
 						<tbody id="bodyRespuesta">
-							<legend></legend>
+							<fieldset>
+								<legend></legend>
+							</fieldset>
 						</tbody>
 					</table>
 				</div>
 				<br>
-<!--				<input type="radio" name="correcta"/>-->
-<!--				<input type="text"/>-->
-<!--				<button id="anadirRespuestas">+</button>-->
-<!--				<br>-->
-<!--				<input type="radio" name="correcta"/>-->
-<!--				<input type="text" disabled placeholder="8 mile"/>-->
-<!--				<button id="anadirRespuestas">-</button>-->
-<!--				<br><br>-->
 				<button class="btn btn-primary" id="siguiente">Siguiente <div class="fa-solid fa-arrow-right"></div></button>
-
+				<br/><br/>
+				<span id="comprobarDatos" hidden>No has completado todos los datos, inténtalo de nuevo.</span>
 			</form>
 		</div>
-		<script src="validacionesCanciones.js"></script>
+		<script src="../js/servicios/validacionesCanciones.js"></script>
 		<script src="https://kit.fontawesome.com/f7b55e9c0a.js" crossorigin="anonymous"></script>
     </body>
 </html>

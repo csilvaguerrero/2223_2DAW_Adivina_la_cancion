@@ -14,16 +14,8 @@ import {Vista} from './vista.js'
 
 /**
 
-<<<<<<< HEAD
-
  *	Vista de la Selección de categorías
-
-=======
-
  *	Vista del Juego
-
->>>>>>> remotes/origin/sprint2_Domingo
-
  *	Contiene la selcción de categorías
 
 **/
@@ -55,7 +47,6 @@ export class VistaCategorias extends Vista{
 		this.pulsarCerrar.addEventListener('click', this.cerrar.bind(this));
 
 
-
 		this.categoriaSeleccionada = null
 		this.divlucha=document.getElementById('luchasRaciales')
 		this.divlucha.addEventListener('click', this.pulsarluchas.bind(this));
@@ -64,11 +55,7 @@ export class VistaCategorias extends Vista{
 		this.divfeminismo=document.getElementById('feminismo')
 		this.divfeminismo.addEventListener('click', this.pulsarfeminismo.bind(this));
 
-
-
 	}
-
-
 
 	/**
 
@@ -84,8 +71,6 @@ export class VistaCategorias extends Vista{
 
 	}
 
-
-
 	/**
 
 	 *	Llama el método del controlador que se acciona al hacer click en una categoría
@@ -95,12 +80,7 @@ export class VistaCategorias extends Vista{
 	juego(){
 
 		this.controlador.pulsarCategorias();
-
-
-
 	}
-
-
 
 	/**
 
@@ -114,8 +94,6 @@ export class VistaCategorias extends Vista{
 		this.ocultarborde()
 	}
 
-
-
 	/**
 
 	 *	Llama el método del controlador que comienza el juego al hacer click en el botón de jugar
@@ -125,14 +103,9 @@ export class VistaCategorias extends Vista{
 	comenzarJuego(){
 
 		if(this.categoriaSeleccionada != null){
-
 			this.controlador.pulsarJuego(this.categoriaSeleccionada);
-
 		}
-
 	}
-
-
 
 	/**
 
@@ -143,17 +116,10 @@ export class VistaCategorias extends Vista{
 	pulsarluchas(){
 
 		this.ocultarborde()
-
 		this.divlucha.style.border = '2px solid red'
-
-		// this.controlador.bordelucha();
-
 		this.categoriaSeleccionada = 1;
 
 	}
-
-
-
 	/**
 
 	 *	Selecciona con un borde la categoría de luchas LGTB y oculta los demás bordes
@@ -163,17 +129,10 @@ export class VistaCategorias extends Vista{
 	pulsarlgtb(){
 
 		this.ocultarborde()
-
 		this.divlgtb.style.border = '2px solid red'
-
-		// this.controlador.bordelgtb();
-
 		this.categoriaSeleccionada = 3;
 
 	}
-
-
-
 	/**
 
 	 *	Selecciona con un borde la categoría de luchas feministas y oculta los demás bordes
@@ -183,11 +142,7 @@ export class VistaCategorias extends Vista{
 	pulsarfeminismo(){
 
 		this.ocultarborde()
-
 		this.divfeminismo.style.border = '2px solid red'
-
-		// this.controlador.bordefeminismo();
-
 		this.categoriaSeleccionada = 2;
 
 	}

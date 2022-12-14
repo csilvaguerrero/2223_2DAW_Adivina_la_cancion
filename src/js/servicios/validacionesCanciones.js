@@ -16,14 +16,23 @@ function anadirFila(evt){
 
     evt.preventDefault()
 
+    let advertenciaRespuesta = document.getElementById('anadirRespuestas')
+
     //Declaramos la tabla donde insertaremos los tr
     let tabla = document.getElementById('bodyRespuesta')
 
-    //Inicializamos el valor de la respuesta
+    //Obtenemos el valor de la respuesta introducido en el input
     let respuesta = document.getElementById('inputAnadir')
 
+    if (respuesta.value == ""){
+        advertenciaRespuesta.removeAttribute('hidden')
+        advertenciaRespuesta.style.color = "yellow"
+        advertenciaRespuesta.textContent = 'No has introducido ninguna respuesta.'
+    }
+    else{
     //Creamos la nueva fila
     let fila = document.createElement('tr')
+    advertenciaRespuesta.textContent = ""
 
     //Creamos el radiobutton que indicara la respuesta correcta
     let radio = document.createElement('input')
@@ -51,7 +60,7 @@ function anadirFila(evt){
     fila.appendChild(celdaBoton)
 
     tabla.appendChild(fila)
-
+    }
 }
 
 function borrarFila(evt){
@@ -64,10 +73,15 @@ function comprobarDatos(evt){
     evt.preventDefault()
     let audio = document.getElementById('inputAudio').value
 
-    if (audio == "")
-       window.alert('No has introducido todos los datos, inténtalo de nuevo.')
-    else
-        window.location.href="canciones_luchas.html"
+    let comprobarDatos = document.getElementById('comprobarDatos')
+
+    if (audio == ""){
+        comprobarDatos.removeAttribute('hidden')
+        comprobarDatos.style.color = "yellow"
+    }
+    else{
+        comprobarDatos.setAttribute("hidden", true)
+    }
 
 
 }
