@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <link rel="styleSheet" href="../css/estilos.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../img/logo.png">
-    <!-- <link rel="styleSheet" href="css/estilos.css" type="text/css">
-    <link rel="icon" type="image/x-icon" href="img/logo.png"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -16,16 +14,16 @@
     <div id="divAnadirCategoria">
       <a href="../index.php"><span class="salir">Volver</span></a>
       <h1 class="tituloInicio">Añadir categoría</h1>
-      <form class="formulario" id="form-categoria" method="post">
+      <form class="formulario" id="form-categoria" method="post" action="../php/categorias/categorias.php">
         <div>
           <div>
             <label class="labelFormulario" for="nombre-categoria">Nombre de la categoría</label>
-            <input type=text name="nombre-categoria" id="nombre-categoria" maxlength="100"/>
+            <input type=text name="nombre_categoria" id="nombre-categoria" maxlength="100"/>
             <br/>
             <span id="advertenciaNombre" hidden></span>
           </div>
           <div>
-            <input type="file" class="inputFormulario" id="inputImagen" accept=".jpg" />
+            <input type="file" class="inputFormulario" id="inputImagen" accept=".jpg" name="imagen"/>
             <label for="inputImagen" class="labelFormulario" id="seleccionar-imagen">
               Selecciona una imagen
               <div class="fa-solid fa-image"></div>
@@ -33,7 +31,7 @@
           </div>
           <div>
             <label class="labelFormulario" for="descripcion-categoria">Descripción de la categoría</label>
-            <textarea type=text name="descripcion-categoria" id="descripcion-categoria" maxlength="500"></textarea>
+            <textarea type=text name="descripcion" id="descripcion-categoria" maxlength="500"></textarea>
             <br/>
             <span id="advertenciaDescripcion" hidden></span>
           </div>
@@ -41,7 +39,7 @@
         <div>
           <div>
             <label for="categoria-tema" class="labelFormulario">Temas de lucha</label>
-            <input type="text" id="categoria-tema">
+            <input type="text" id="categoria-tema" name="nombre_tema">
             <button class="anadirRespuestas" id="anadir-temas">+</button>
             <br/>
             <span id="advertenciaTema" hidden>No has añadido ningún tema de lucha.</span>
@@ -60,8 +58,8 @@
             </table>
           </div>
         </div>
+		<input type="submit" class="btn btn-primary" name="anadir" id="anadir-categoria" value="Añadir" />
       </form>
-      <input type="submit" class="btn btn-primary" id="anadir-categoria" value="Añadir" />
     </div>
 	<script src="../js/servicios/validacionesCategorias.js"></script>
     <script src="https://kit.fontawesome.com/f7b55e9c0a.js" crossorigin="anonymous"></script>
