@@ -35,14 +35,15 @@
             <label class="labelFormulario" for="descripcion-categoria">Descripción de la categoría</label>
             <textarea type=text name="descripcion-categoria" id="descripcion-categoria" maxlength="500"></textarea>
             <br/>
-            <span id="advertenciaTema" hidden>No has añadido ningún tema de lucha.</span>
+            <span id="advertenciaDescripcion" hidden></span>
           </div>
         </div>
         <div>
           <div>
             <label for="categoria-tema" class="labelFormulario">Temas de lucha</label>
             <input type="text" id="categoria-tema">
-            <button class="anadirRespuestas" id="anadir-tema">+</button>
+            <button class="anadirRespuestas" id="anadir-temas">+</button>
+            <br/>
             <span id="advertenciaTema" hidden>No has añadido ningún tema de lucha.</span>
           </div>
           <div>
@@ -62,6 +63,7 @@
       </form>
       <input type="submit" class="btn btn-primary" id="anadir-categoria" value="Añadir" />
     </div>
+	<script src="../js/servicios/validacionesCategorias.js"></script>
     <script src="https://kit.fontawesome.com/f7b55e9c0a.js" crossorigin="anonymous"></script>
   </body>
 </html>

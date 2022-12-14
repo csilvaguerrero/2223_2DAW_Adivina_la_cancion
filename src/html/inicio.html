@@ -36,7 +36,7 @@
 		<div id="instrucciones">
 			<div class="contenedor">
 				<div class="divcerrar">
-					<span class="salir"/>Regresar</span>
+					<span class="salir">Regresar</span>
 					<div class="divcomun2">
 						<h1>Instrucciones</h1><br>
 					</div>
@@ -204,17 +204,15 @@
 			</div>
 		  </div>
 		  <div id="divPuntuacion">
-			<form id="formulario">
-				<button class="salirFormulario">X</button>
+			<form id="formulario-puntuacion">
+				<span class="salir">Regresar</span>
 				<h1 class="tituloInicio">Registro puntuación</h1>
-				<label class="labelFormulario">Nickname</label>
-				<br>
-				<input type="text" class="inputFormulario" name="nombre"/>
-				<br><br>
-				<label class="labelFormulario">He leído y acepto los términos de uso</label>
-				<input type="radio"/>
+				<label class="labelFormulario" for="nick">Nickname</label>
+				<input type="text" class="inputFormulario" name="nick" id="nick"/>
+				<input type="radio" id="terminos-uso" name="terminos-uso" />
+				<label for="terminos-uso">He leído y acepto los términos de uso</label>
 				<a href="index.html">
-					<input type="submit" class="btn btn-primary" id="inputEnviar"/>
+					<input type="submit" class="btn btn-primary" id="enviar-puntuacion"/>
 				</a>
 			</form>
 		</div>

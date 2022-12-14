@@ -4,8 +4,6 @@
        <meta charset="UTF-8">
 		<link rel="styleSheet" href="../css/estilos.css" type="text/css">
 		<link rel="icon" type="image/x-icon" href="../img/logo.png">
-		<!-- <link rel="styleSheet" href="css/estilos.css" type="text/css">
-		<link rel="icon" type="image/x-icon" href="img/logo.png"> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -17,41 +15,53 @@
 			<a href="crudcanciones.html"><span class="salir">Volver</span></a>
 			<form class="formulario">
 				<h1 class="tituloInicio">Añadir canciones</h1>
-
-				<label class="labelFormulario">Audio</label>
-
-				<br>
-
-				<input type="file" class="inputFormulario" id="inputAudio" accept=".mp3"/>
-
-				<br>
-
-				<label class="labelFormulario">Categorías</label>
-
-				<br>
-
-				<select>
-
-					<option>Luchas raciales</option>
-
-					<option>LGTBIQ+</option>
-
-					<option>Feminismo</option>
-
-				</select>
-
+				<div>
+					<input type="file" class="inputFormulario" id="inputAudio" accept=".mp3"/>
+					<label for="inputAudio" class="labelFormulario" id="seleccionar-cancion">
+						<div class="fa-solid fa-music"></div>
+						 Selecciona una canción
+						<div class="fa-solid fa-music"></div>
+					</label>
+				</div>
+				<div>
+					<label class="labelFormulario" for="seleccion-categorias">Categorías</label>
+					<select id="seleccion-categorias">
+						<option>Luchas raciales</option>
+						<option>LGTBIQ+</option>
+						<option>Feminismo</option>
+					</select>
+				</div>
 				<br>
 				<label class="labelFormulario">Respuestas</label>
-
+				<div id="divRespuesta">
+					<label for="inputAnadir" hidden>Posible titulo de la cancion</label>
+					<input type=text name="nombre-cancion" id="inputAnadir"/>
+					<button name="Añadir" id="AnadirRespuesta" class="botonform">Añadir respuesta</button>
+					<br/><br/>
+					<span id="anadirRespuestas" hidden></span>
+					<br/><br/>
+					<table id="tabla">
+						<thead>
+							<tr>
+								<td></td>
+								<td class="titulo">Nombre</td>
+								<td class="titulo">Quitar</td>
+							</tr>
+						</thead>
+						<tbody id="bodyRespuesta">
+							<fieldset>
+								<legend></legend>
+							</fieldset>
+						</tbody>
+					</table>
+				</div>
 				<br>
-
-				
-				<input type="submit"  class="btn btn-primary" id="inputEnviar" value="Siguiente"/>
-
-			</form>	
-
+				<button class="btn btn-primary" id="siguiente">Siguiente <div class="fa-solid fa-arrow-right"></div></button>
+				<br/><br/>
+				<span id="comprobarDatos" hidden>No has completado todos los datos, inténtalo de nuevo.</span>
+			</form>
 		</div>
 		<script src="../js/servicios/validacionesCanciones.js"></script>
 		<script src="https://kit.fontawesome.com/f7b55e9c0a.js" crossorigin="anonymous"></script>
-    </body>
+	</body>
 </html>

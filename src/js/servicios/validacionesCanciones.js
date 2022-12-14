@@ -8,7 +8,7 @@ function iniciar(){
 
     agregarRespuesta.addEventListener('click', anadirFila)
     anadirCancion.addEventListener('click', comprobarDatos)
-
+    
 }
 
 
