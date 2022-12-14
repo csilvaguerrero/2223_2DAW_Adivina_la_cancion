@@ -12,7 +12,7 @@
 /* Generales */
 
 html{
-	height: 100vh;
+	min-height: 100vh;
 }
 
 /* Resetear estilos de enlaces */
@@ -25,21 +25,62 @@ a{
 
 body{
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
 	background: linear-gradient(to bottom, #9851b8, #341741);
+}
+
+header{
+	background-color: #341741 !important;
+}
+
+.fa-solid{
+	font-size: 2rem;
+	color: white;
+}
+
+.fa-solid:hover{
+	color: #F0E522;
+}
+
+.fa-book{
+	font-size: 2.1rem;
+}
+
+.fa-arrow-right{
+	margin-left: 5px;
+	font-size: 1rem;
+}
+
+.fa-arrow-right:hover{
+	color: white;
 }
 
 /* inicio.html */
 
 /* Elementos de body */
 
-main#inicio{
-	height: 100%;
-	box-sizing: border-box;
-	padding: 0 20px;
+header{
+	width: 100%;
+	height: 80px;
+	background-color: #160d24;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 1px 10px hsla(281, 48%, 17%, 0.7);
+	position: absolute;
 }
 
-div#instrucciones, div#puntos, div#categorias, div#juego, div#guardar-puntuacion, div#divPuntuacion{
+main#inicio{
+	min-height: 100vh;
+	box-sizing: border-box;
+	padding: 0 20px;
+	display: flex;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
+	justify-content: center;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
+	align-items: center;
+}
+
+div#instrucciones, div#puntos, div#categorias, div#juego, div#guardar-puntuacion, div#divPuntuacion {
 	width: 100%;
 	height: 100%;
 	visibility: hidden;
@@ -49,11 +90,15 @@ div#instrucciones, div#puntos, div#categorias, div#juego, div#guardar-puntuacion
 	display: flex;
 	background: linear-gradient(to bottom, #9851b8, #341741);
 	visibility: hidden;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	align-items: center;
 }
 
 div#juego{
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
 	flex-direction: column;
 }
 
@@ -61,22 +106,137 @@ div.contenedor{
 	width: 100%;
 	height: 100%;
 	display: flex;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
+}
+
+div.divcerrar{
+	color: white;
+	width: 50%;
+	margin:auto;
+	padding: 2%;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
+	align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
+	justify-content: center;
+}
+
+div.divcerrar h1{
+	font-family: Nunito;
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 div.divcomun2{
 	text-align: center;
 }
 
+div.divcomun2 ~ p{
+	padding: 10px 0 15px;
+	text-align: justify;
+}
+
+/* Elementos header */
+nav{
+	width: 100%;
+	display: flex;
+	/* Cambio a la propiedad que distribuye el contenido del contenedor en el espacio que dispone el contenedor,
+	 tratando de acercar el primer y último elemento a los bordes del contenedor */
+	justify-content: space-between;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
+	align-items: center;
+}
+
+#usuario{
+	display: flex;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
+	align-items: center;
+}
+
+#usuario > div{
+	width: 80px;
+	margin-left: 20px;
+}
+
+#usuario > div > img{
+	width: 100%;
+	height: auto;
+}
+
+#usuario > span{
+	margin-left: 10px;
+	text-align: center;
+	font-size: 1.2rem;
+	color: white;
+	letter-spacing: 1px;
+}
+
+#hamburguesa{
+	display: none;
+}
+
+.menu-hamburguesa{
+	font-size: 25px;
+	cursor: pointer;
+	display: none;
+}
+
+ul {
+	margin-right: 30px;
+	list-style-type: none;
+	color: white;
+}
+
+ul li {
+	margin: 0 12px;
+	padding: 10px 15px;
+	text-align: center;
+	font-size: 1.1rem;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 2px;
+	transition: all 0.2s ease-in;
+}
+
+ul li:hover {
+	background-color: #8431aa;
+	color: #F0E522;
+}
+
+#cerrar-sesion{
+	padding: 10px 15px;
+	background-color: #8431aa;
+}
+
+#cerrar-sesion:hover{
+	background-color: #F0E522;
+}
+
+#cerrar-sesion:hover > a{
+	color: #160d24;
+}
+
 /* Elementos de #inicio */
+
+main#inicio > a{
+	position: absolute;
+	left: 2%;
+	bottom: 2vh;
+}
 
 div#div1 {
 	width: 100%;
 	height: 90%;
 	display: flex;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
 	flex-direction: column;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
 }
 
@@ -88,7 +248,9 @@ div#div2 {
 	background-color: #341741;
 	border-radius: 5px;
 	display: flex;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	align-items: center;
 }
 
@@ -100,13 +262,18 @@ div#aviso{
 	display: none;
 }
 
+#salirJuego{
+	position: absolute ;
+	top: 3vh;
+	left: 3%;
+}
+
 /* Elementos de #instrucciones */
 
 
 /* Elementos de #puntos */
 
 table#tablaPuntos{
-	border:1px black solid;
 	border-collapse: collapse;
 	text-align: center;
 	vertical-align: middle;
@@ -114,9 +281,8 @@ table#tablaPuntos{
 	width: 75%;
 }
 
-#tablaPuntos td, #tablaPuntos th{
-	border:1px black solid;
-	border-collapse: collapse;
+table#tablaPuntos td{
+	color: #160d24;
 }
 
 /* Elementos de #categorias */
@@ -127,6 +293,7 @@ div#contenidoCategorias{
 
 #luchas{
 	display: flex;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos a su valor por defecto */
 	flex-direction: row;
 }
 
@@ -150,10 +317,14 @@ div#div0 h3{
 
 div#divinicial{
 	display: flex;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
 	width: 100%;
 	height: 80%;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
 	flex-direction: column;
 }
 
@@ -182,20 +353,43 @@ div#siguiente-cancion{
 	font-size: 3rem;
 }
 
+/* Elementos de #divPuntuacion */
+
+form#formulario-puntuacion{
+	width: 50%;
+}
+
+form#formulario-puntuacion > label{
+	color: white;
+}
+
+form#formulario-puntuacion > input[type="text"]{
+	width: 100%;
+	margin: 10px 0 25px;
+	display: block;
+}
+
+form#formulario-puntuacion > input[type="radio"]{
+	margin: 0 1% 40px 5%;
+}
+
 /* Elementos de #luchas */
 
 /* Aplicamos display inline-block para alinear las 3 categorias manteniendo su propiedad natural en bloque. */
 div#luchasRaciales, div#lgtbq, div#feminismo{
 	display: flex;
 	margin: 30px;
-	flex-direction: column;	flex-direction: column;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
+	flex-direction: column;
 }
 
-/* Botón de comenzar el juego */
-button#comenzarJuego{
+/* Botones de la aplicación */
+button#comenzarJuego, input#iniciar-sesion{
 	display: block;
 	margin: auto;
 	font-size: 25px;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
 	cursor: pointer;
 	transition: all ease 0.8s;
@@ -208,13 +402,50 @@ button#comenzarJuego{
 	border-radius: 5px;
 }
 
-button#comenzarJuego:hover{
+button#comenzarJuego:hover, input#iniciar-sesion:hover{
 	transform: scale(1.3);
 	background-color: #F0E522;
 	color: hsl(279, 75%, 57%);
 }
 
+input#iniciar-sesion{
+	margin-top: 50px;
+}
+
 /* Propiedades que comparten todos los formularios */
+
+/* DIVS a los que se hará referencia en cliente para el despliegue de su vista */
+
+div#divCRUDcanciones, #divCRUDtemas, #divAnadirCanciones, #divPuntuacion, #divAnadirTemas, #divRegistro, #divLogin, #divAnadirCategoria{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
+	flex-direction: column;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
+	justify-content: center;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
+	align-items: center;
+	text-decoration: none;
+}
+
+form#formulario-login{
+	width: 50%;
+	padding: 50px 5%;
+	background-color: #341741;
+	display: flex;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
+	justify-content: center;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
+	align-items: center;
+	box-shadow: 0 2px 10px rgba(22, 13, 36, 0.5);
+}
+
+form#formulario-login > div{
+	width: 100%;
+	padding: 5%;
+}
 
 form.formulario{
 	width: 70%;
@@ -230,7 +461,7 @@ form#form-categoria input[type="text"], textarea{
 	width: 90%;
 }
 
-form#form-categoria select{
+form#form-categoria input#categoria-tema{
 	width: calc(90% - 50px);
 }
 
@@ -242,7 +473,7 @@ form#form-categoria textarea{
 	border: 1px solid white;
 }
 
-form.formulario input[type="text"]{
+form.formulario input[type="text"], input#nick, input#email, input#password{
 	margin-bottom: 5px;
 	padding: 5px;
 	border: 1px solid white;
@@ -255,6 +486,10 @@ form.formulario select{
 	padding: 5px 10px;
 	background-color: #341741;
 	color: white;
+}
+
+input#email, input#password{
+	width: 100%;
 }
 
 input[type="file"]{
@@ -295,7 +530,7 @@ label#seleccionar-cancion:hover div, label#seleccionar-imagen:hover div{
 	color: #8431aa;
 }
 
-form.formulario table{
+form.formulario table, div.divcerrar table{
 	width: 70%;
 	margin: 15px auto 30px;
 	text-align: center;
@@ -305,26 +540,27 @@ form#form-categoria table{
 	width: 90%;
 }
 
-form.formulario thead{
+form.formulario thead, table#tablaPuntos thead{
 	background-color: #341741;
 	color: white;
 }
 
-form.formulario td{
+form.formulario td, table#tablaPuntos td, table#tablaPuntos th{
 	padding: 10px 15px;
 }
 
-form.formulario tbody tr:nth-child(even){
+form.formulario tbody tr:nth-child(even), table#tablaPuntos tbody tr:nth-child(even){
 	background-color: hsl(280, 70%, 66%);
 }
 
-form.formulario tbody tr:nth-child(odd){
+form.formulario tbody tr:nth-child(odd), table#tablaPuntos tbody tr:nth-child(odd){
 	background-color: hsl(280, 65%, 70%);
 }
 
 form.formulario td:nth-child(3){
 	padding-left: 20px;
 	display: flex;
+	/* Cambio a la propiedad que coloca los elementos hijos en el borde derecho del contenedor */
 	justify-content: right;
 }
 
@@ -338,7 +574,11 @@ form#form-categoria > div{
 	min-height: 450px;
 	padding: 30px;
 	display: flex;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
 	flex-direction: column;
+	/* Cambio que distribuye los elementos hijos dentro del contenedor, de forma que el primero y el último elemento
+	 queden relativamente alejados de los bordes derecho e izquierdo del contenedor */
 	justify-content: space-around;
 }
 
@@ -350,6 +590,7 @@ h1.tituloInicio{
 	text-align: center;
 	color: #F0E522;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 /* Inputs de todos los formularios */
@@ -363,7 +604,7 @@ input.inputFormulario{
 }
 
 /* Boton enviar de todos los formularios */
-div#siguiente, div#enviar-datos, input#anadir-categoria{
+div#siguiente, div#enviar-datos, input#anadir-categoria, input#enviar-puntuacion{
 	display: block;
 	margin: 0 auto 20px;
 	width: 180px;
@@ -372,7 +613,9 @@ div#siguiente, div#enviar-datos, input#anadir-categoria{
 	background-color: hsl(279, 75%, 57%);
 	font-weight: bold;
 	display: flex;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
     justify-content: center;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	align-items: center;
 	cursor: pointer;
 	transition: all ease 0.8s;
@@ -540,8 +783,12 @@ p#infofem{
 div#contenidoCategorias{
 	height: 500px;
 	display: flex;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
 	flex-direction: column;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	align-items: center;
 }
 
@@ -642,7 +889,9 @@ span.salir{
     font-weight: bold;
 	border-radius: 5px;
 	display: flex;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	align-items: center;
 }
 
@@ -679,7 +928,9 @@ button#boton3{
 	width: 250px !important;
 	padding: 0 30px;
     display: flex;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
     align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
     justify-content: center;
 	cursor: pointer;
 	transition: all ease 0.8s;
@@ -732,32 +983,22 @@ div#divform{
 }
 
 input#terminos{
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
     align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
     justify-content: center;
 }
 
 input#enviar{
     margin-top: 30px;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
     align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
     justify-content: center;
 }
 
 input#nombre{
     border-radius: 7%;
-}
-
-div.divcerrar{
-	background-color: #794393;
-	color: white;
-    width: 25%;
-	min-width: 222px;
-    height: 50%;
-    margin:auto;
-    padding-left: 2%;
-    padding-right: 2%;
-    box-shadow: 5px 10px 18px black;
-    align-items: center;
-    justify-content: center;
 }
 
 div.divcerrar h1{
@@ -780,10 +1021,10 @@ div#divdrag2, div#divdrag3 {
     min-height: 80px;
     border: 5px #F0E522 dashed;
     width: 100%;
+	/* El flex wrap lo utilizamos para que los elementos hijos en riesgo de desbordamiento hagan un salto de línea
+	 en vez de que el contenido se salga del contenedor, modificando la altura del elemento contenedor en este caso */
 	flex-wrap: wrap;
 }
-
-
 
 div#divdrag3{
     margin-top: 3%;
@@ -797,11 +1038,16 @@ span.opciones{
     padding: 5px;
 	border: 0.5px white solid;
     border-radius: 10px;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
     align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
     justify-content: center;
 	margin: 10px;
 	color: white;
 	display: flex;
+	/* Cuando los elementos hagan un salto de línea gracias al flex wrap del contenedor, el flex grow permite a los elementos
+	 que pase a la siguiente línea gestionar el espacio sobrante para ocuparlo completamente entre los elementos que han hecho
+	 el salto de línea. */
 	flex-grow: 2;
 	flex-shrink: 2;
 }
@@ -811,8 +1057,12 @@ div#divopcion{
     text-align: center;
     margin-top: 20px;
 	display: flex;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
     align-items: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
     justify-content: center;
+	/* El flex wrap lo utilizamos para que los elementos hijos en riesgo de desbordamiento hagan un salto de línea
+	 en vez de que el contenido se salga del contenedor, modificando la altura del elemento contenedor en este caso */
 	flex-wrap: wrap;
 }
 
@@ -825,8 +1075,12 @@ div#divopcion span.opciones{
 div#guardar-puntuacion{
 	height: 100%;
 	display: flex;
+	/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 	justify-content: center;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	align-items: center;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
 	flex-direction: column;
 }
 
@@ -915,12 +1169,17 @@ div#resumen > span{
 div#resumen-canciones{
 	width: 100%;
 	display: flex;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
 	flex-direction: column;
 }
 
 div#resumen-canciones > div{
 	display: flex;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
+	/* El flex wrap lo utilizamos para que los elementos hijos en riesgo de desbordamiento hagan un salto de línea
+	 en vez de que el contenido se salga del contenedor, modificando la altura del elemento contenedor en este caso */
 	flex-wrap: wrap;
 }
 
@@ -933,14 +1192,20 @@ span.canciones{
 	margin: 10px;
 	color: hsl(56, 85%, 50%);
 	display: flex;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
-	flex-grow: 3;
+	/* Cuando los elementos hagan un salto de línea gracias al flex wrap del contenedor, el flex grow permite a los elementos
+	 que pase a la siguiente línea gestionar el espacio sobrante para ocuparlo completamente entre los elementos que han hecho
+	 el salto de línea. */
+	flex-grow: 2;
 	flex-shrink: 2;
 }
 
 div#resumen-puntos{
 	text-align: center;
 	display: flex;
+	/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 de hacerlo en fila */
 	flex-direction: column;
 }
 
@@ -970,6 +1235,7 @@ div#resumen-puntos span:last-child{
 
 div#continuar{
 	display: flex;
+	/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 	justify-content: center;
 }
 
@@ -993,95 +1259,43 @@ div#continuar button:hover {
 	color: #341741;
 }
 
-/* Menu */
-
-header{
-	width: 100%;
-	height: 80px;
-	background-color: #160d24;
-	display: flex;
-	align-items: center;
-	box-shadow: 0 1px 10px hsla(281, 48%, 17%, 0.7);
-	position: absolute;
-}
-
-nav{
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-#usuario{
-	display: flex;
-	align-items: center;
-}
-
-#usuario > div{
-	width: 80px;
-	margin-left: 20px;
-}
-
-#usuario > div > img{
-	width: 100%;
-	height: auto;
-}
-
-#usuario > span{
-	margin-left: 10px;
-	text-align: center;
-	font-size: 1.2rem;
-	color: white;
-	letter-spacing: 1px;
-}
-
-#hamburguesa{
-	display: none;
-}
-
-.menu-hamburguesa{
-	font-size: 25px;
-	cursor: pointer;
-	display: none;
-}
-
-ul {
-	margin-right: 30px;
-	list-style-type: none;
-	color: white;
-}
-
-ul li {
-	margin: 0 12px;
-	padding: 10px 15px;
-	text-align: center;
-	font-size: 1.1rem;
-	display: inline-block;
-	cursor: pointer;
-	border-radius: 2px;
-	transition: all 0.2s ease-in;
-}
-
-ul li:hover {
-	background-color: #8431aa;
-	color: #F0E522;
-}
-
 /* Media Queries */
 
 /* Dispositivos pequeños (móviles, 600px <) */
 @media only screen and (max-width: 600px) {
 
 	html{
-		height: auto;
+		min-height: 100vh;
+		font-size: 10px;
 	}
 
 	body{
-		height: auto;
 		padding: 0 0 30px;
 	}
 
-	form#form-categoria{
+	div#categorias, div#juego, div#guardar-puntuacion{
+		display: none
+	}
+
+	span.salir{
+		position: relative;
+		width: 100%;
+		height: 7vh;
+		top: 0;
+		left: 0;
+		background-color: #341741;
+		border-radius: 0;
+	}
+
+	div#divAnadirCategoria, div#divAnadirCanciones{
+		display: block;
+	}
+
+	form#form-categoria, form.formulario{
+		width: 100%;
+		padding: 0 20px;
+		/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 	de hacerlo en fila */
 		flex-direction: column;
 	}
 
@@ -1095,17 +1309,61 @@ ul li:hover {
 		width: 100%;
 	}
 
-	form#form-categoria select{
-		max-width: calc(100% - 50px);
+	form.formulario [type="text"], form.formulario table, form.formulario select{
+		width: 100%;
+		min-height: 40px;
+	}
+
+	form.formulario input[type="text"]{
+		width: 80%;
+	}
+
+	input#categoria-tema{
+		max-width: calc(100% - 60px);
 		min-height: 38px;
+	}
+
+	select#seleccion-temas{
+		width: calc(100% - 60px);
+	}
+
+	form#form-categoria input{
+		height: 40px;
+	}
+
+	form#form-categoria textarea{
+		width: 100%;
+	}
+
+	label#seleccionar-imagen, label#seleccionar-cancion{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		/* Cambio que distribuye los elementos hijos en el espacio que dispone el contenedor, alejando el primer y
+		 el último elemento lo máximo posible de los bordes derecho e izquierdo del contenedor */
+		justify-content: space-around;
+		height: 80px;
+	}
+
+	input#anadir-categoria, div#enviar-datos{
+		width: 100%;
+		margin: 0;
+	}
+
+	div#siguiente{
+		width: 100%;
 	}
 
 	main#inicio{
 		width: 100%;
 		height: 100vh;
 		display: flex;
+		/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 	de hacerlo en fila */
 		flex-direction: column;
+		/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 		justify-content: center;
+		/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 		align-items: center;
 	}
 
@@ -1120,7 +1378,9 @@ ul li:hover {
 	div#aviso{
 		margin-bottom: 8vh;
 		display: flex;
+		/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 		align-items: center;
+		/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 		justify-content: center;
 		color: white;
 		background-color: hsl(279, 75%, 57%);
@@ -1137,6 +1397,8 @@ ul li:hover {
 	nav{
 		display: block;
 		align-items: center;
+		/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 	de hacerlo en fila */
 		flex-direction: column;
 		/*height: 100%;*/
 		width: 100%;
@@ -1216,9 +1478,39 @@ ul li:hover {
 		margin-bottom: 2vh;
 	}
 
-	html{
-		font-size: 10px;
+	div#divPuntuacion{
+		height: 100vh;
+		display: flex;
+		align-items: center;
 	}
+
+	form#formulario-puntuacion{
+		width: 100%;
+		padding: 20px;
+	}
+
+	form#formulario-puntuacion > h1{
+		font-size: 3rem;
+	}
+
+	form#formulario-puntuacion > input, form#formulario-puntuacion > label:nth-child(1){
+		font-size: 2rem;
+	}
+
+	div#divLogin{
+		padding: 0;
+	}
+
+	form#formulario-login{
+		width: 100%;
+		height: 100vh;
+		background-color: transparent;
+	}
+
+	h1.tituloInicio{
+		font-size: 3rem;
+	}
+
 }
 
 /* Dispositivos medianos (tablets, 768px < 1023px) */
@@ -1229,7 +1521,24 @@ ul li:hover {
 	}
 
 	body{
-		height: auto;
+		min-height: 100vh;
+	}
+
+	main#inicio{
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+		/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 	de hacerlo en fila */
+		flex-direction: column;
+		/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
+		justify-content: center;
+		/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
+		align-items: center;
+	}
+
+	main#inicio > a{
+		margin-top: 20px;
 	}
 
 	h2.titulosCategorias {
@@ -1243,6 +1552,8 @@ ul li:hover {
 	div#luchasRaciales, div#lgtbq, div#feminismo {
 		display: flex;
 		margin: 30px 15px;
+		/* Cambia la dirección en que distribuye el contenedor flex sus elementos, poniendolos en columna en vez
+	 	de hacerlo en fila */
 		flex-direction: column;
 	}
 
@@ -1349,7 +1660,9 @@ ul li:hover {
 	div#contenidoCategorias {
 		height: 250px;
 		display: flex;
+		/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 		justify-content: center;
+		/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 		align-items: center;
 	}
 
@@ -1373,66 +1686,16 @@ ul li:hover {
 	}
 
 	ul li{
+		padding: 5px;
 		display: flex;
+		/* Cuando el menú se encuentre en tamaño de tablets cambia su disposición a caja flexible, para que en caso
+		de que haya exceso de botones para el espacio del contenedor, estos botones puedan gestionar el espacio faltante
+		en el contenedor y los botones no se desborden */
 		flex-shrink: 2;
+		flex-grow: 2;
+		/* Cambio a la propiedad que centra horizontalmente todo el contenido del contenedor */
 		justify-content: center;
+		/* Cambio a la propiedad que centra verticalmente todo el contenido del contenedor */
 		align-items: center;
 	}
 }
-
-#salirJuego{
-	position: absolute ;
-	top: 3vh;
-	left: 3%;
-}
-
-header{
-	background-color: #341741 !important;
-}
-
-.fa-solid{
-	font-size: 2rem;
-	color: white;
-}
-
-.fa-solid:hover{
-	color: #F0E522;
-}
-
-.fa-book{
-	font-size: 2.1rem;
-}
-
-.fa-arrow-right{
-	margin-left: 5px;
-	font-size: 1rem;
-}
-
-.fa-arrow-right:hover{
-	color: white;
-}
-
-
-/* DIVS a los que se hará referencia en cliente para el despliegue de su vista */
-
-div#divCRUDcanciones, #divCRUDtemas, #divAnadirCanciones, #divPuntuacion, #divAnadirTemas, #divRegistro, #divLogin{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-}
-
-
-
-/*nav{*/
-/*	display: flex;*/
-/*	align-items: center;*/
-/*	justify-content: center;*/
-/*	flex-direction: row;*/
-/*	background-color: transparent;*/
-/*	width: 100%;*/
-/*	height: 75px;*/
-/*}*/

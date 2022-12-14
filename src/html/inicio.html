@@ -1,11 +1,11 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 	<head>
 		<title>Inicio</title>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" />
 		<meta name=viewport content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
 	</head>
 	<body>
 		<audio id="cancion-fondo">
@@ -13,17 +13,17 @@
 		</audio>
 		<main id="inicio">
             <div id="div2">
-				<div class="opciones" id="reproducir" name="play-music"><i class="fa-solid fa-play"></i></div>
-				<div class="opciones" id="parar" name="stop-music"><i class="fa-solid fa-pause"></i></div>
-				<button class="opciones" id="mostrarpuntos" name="puntos"><i class="fa-solid fa-trophy"alt="Ver puntuaciones"></i></button>
-				<button class="opciones" name="instrucciones"><i class="fa-sharp fa-solid fa-book" alt="Ver instrucciones"></i></button>
+				<div class="opciones" id="reproducir" name="play-music"><div class="fa-solid fa-play"></div></div>
+				<div class="opciones" id="parar" name="stop-music"><div class="fa-solid fa-pause"></div></div>
+				<button class="opciones" id="mostrarpuntos" name="puntos"><div class="fa-solid fa-trophy"alt="Ver puntuaciones"></div></button>
+				<button class="opciones" name="instrucciones"><div class="fa-sharp fa-solid fa-book" alt="Ver instrucciones"></div></button>
             </div>
 			<div id="div1">
 				<img src="img/logotipo_blanco1.png" alt="logo" id="logoinicio">
 				<button id="boton3">
-					<i class="fa-solid fa-play"></i>
+					<div class="fa-solid fa-play"></div>
 					<span id="comenzar">&nbsp;&nbsp;&nbsp;Comenzar&nbsp;&nbsp;&nbsp;  </span>
-					<i class="fa-solid fa-music"></i>
+					<div class="fa-solid fa-music"></div>
 				</button>
 			</div>
 			<div id="aviso">
@@ -46,6 +46,27 @@
 						cumque sed omnis quod voluptate, aut accusantium illum ipsam
 						quas blanditiis dolorum facere asperiores?
 					</p>
+					<p>
+						Phasellus enim est, tincidunt quis hendrerit eu, viverra sed leo. Quisque dignissim,
+						metus sit amet condimentum ullamcorper, neque lacus ornare turpis, vel porta urna risus
+						ut ligula. Duis iaculis mi nec quam fringilla porta. Ut dapibus aliquet nisl, vel fringilla
+						metus gravida nec. Suspendisse ornare enim et nibh finibus dictum. Aliquam ante nisi,
+						pellentesque in condimentum eu, consectetur in nisl. Donec tempus, quam eget euismod
+						porttitor, augue augue mattis lorem, eu rhoncus mi erat id mauris. Donec bibendum ut
+						sapien sed elementum. Phasellus id iaculis nunc, non pellentesque odio.
+					</p>
+					<p>
+						Nam lorem ante, iaculis a euismod in, dictum sed urna. Aenean mollis ornare lectus,
+						eget ornare tortor tempor nec. Morbi tincidunt tristique risus non pellentesque.
+						Integer sed malesuada nunc. Sed diam velit, sagittis id tempor ac, dictum quis erat.
+						Praesent lobortis quam a faucibus mattis. Nam ullamcorper risus neque, quis dictum
+						libero euismod vel. Curabitur fringilla magna ac imperdiet scelerisque. Cras iaculis
+						dolor sed mi laoreet, sit amet tempor justo pharetra. Fusce blandit lorem nunc, eget
+						vestibulum nunc consequat sed. Donec quis sem nec ligula porta vestibulum in sit amet
+						enim. Mauris euismod consequat vestibulum. Nulla sit amet purus in ante sodales aliquet
+						id eu ligula. Pellentesque mattis, nisi nec egestas dapibus, dolor leo luctus mi, at
+						euismod ligula est ac massa. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -57,26 +78,30 @@
 						<h1>Puntuaciones</h1><br>
 					</div>
 					<table id="tablaPuntos">
-						<tr>
-							<th>Posicion</th>
-							<th>Nombres</th>
-							<th>Ptos</th>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>Pedro </td>
-							<td>5</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Juan</td>
-							<td>2</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Lucas</td>
-							<td>1</td>
-						</tr>
+						<thead>
+							<tr>
+								<th>Posicion</th>
+								<th>Nombres</th>
+								<th>Ptos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Pedro </td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Juan</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Lucas</td>
+								<td>1</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 			</div>
@@ -84,7 +109,6 @@
 		<div id="categorias">
 			<div id="contenidoCategorias">
 				<span id="salirCategoria" class="salir">Regresar</span>
-<!--				<button class="btnVolver" id="salirCategoria">Volver</button>-->
 				<div>
 					<div id="luchas">
 						<div id="luchasRaciales" class="categorias">
